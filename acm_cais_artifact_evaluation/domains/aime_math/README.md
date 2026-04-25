@@ -17,6 +17,8 @@ uv run python main.py            # resumes from bundled state
 
 To run a fresh optimization instead, delete (or move) `logs/gepa_state.bin` first.
 
+**Note on LLM nondeterminism.** The optimized prompt is fixed (in `logs/best_prompt.txt`), but *evaluating* it against AIME 2025 calls `gpt-4.1-mini` at `temperature=1.0`, which is nondeterministic. The original Jan 2026 run logged in `run.log` produced **18/30 = 60.00%** (the paper number); re-running the eval today on the same prompt typically lands in the 50–60% range. The deterministic, paper-matching evidence is in `run.log` (see the line `Test score improved from 46.67% to 60.00%!`).
+
 ## What's in `logs/`
 
 | File | Purpose |
