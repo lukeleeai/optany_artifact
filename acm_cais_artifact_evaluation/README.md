@@ -17,8 +17,8 @@ Artifact for the paper **"optany: Unified Text Optimization can Outperform Speci
 | §5.5 CUDA Kernel Generation (KernelBench) | `domains/kernelbench/` |
 | §5.6 Circle Packing (n=26) | `domains/circle_packing/` |
 | §5.7 SVG / CAD Image Generation | `domains/svg_cad/` |
-| Appendix B Black-box Math Optimization | `domains/blackbox_3d/` |
-| Appendix C 3D Modeling (seedless) | `domains/blackbox_3d/` (notebook) |
+| Appendix B Black-box Math Optimization | `domains/blackbox/` |
+| Appendix C 3D Modeling (seedless) | `domains/modeling_3d/` |
 
 ## Setup
 

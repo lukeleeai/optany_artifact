@@ -1,0 +1,19 @@
+{
+    "score": -8.639184502958683,
+    "all_trials": [
+        {
+            "x": [
+                0.9762700785464951,
+                4.30378732744839
+            ],
+            "score": 8.639184502958683
+        }
+    ],
+    "Stdout": "",
+    "Error": "",
+    "Traceback": "",
+    "budget_total": 2000,
+    "budget_used": 1,
+    "proposal_total": 10,
+    "proposal_completed": 1
+}
