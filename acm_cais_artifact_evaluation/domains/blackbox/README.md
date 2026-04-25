@@ -40,17 +40,26 @@ done
 
 Each run writes to `outputs/<run-name>/problem_<i>/<model>/<seed>/<timestamp>/` with `gepa_state.bin`, `eval_log.jsonl`, and `results.json`.
 
+## Result
+
+![Blackbox 10 hardest @ b=2000](logs/b2000_gepa10p_vs_optuna_hardest.png)
+
+optany wins **7 / 10** of the hardest problems against Optuna at the 2,000-evaluation budget.
+
 ## `logs/`
 
-Bundled paper-run output for the 10 hardest problems. Layout:
+Bundled paper-run output for the 10 hardest problems:
 
 ```
 logs/
-├── b2000_gepa10p_vs_optuna_hardest.png   # paper figure: per-problem speedup vs Optuna
-└── problem_<i>/gpt-5.1/<seed>/<timestamp>/
-    ├── gepa_state.bin     # full GEPA optimizer checkpoint
-    ├── eval_log.jsonl     # per-call objective trace (eval_num, score, best_score, ...)
-    └── results.json       # final summary
+├── b2000_gepa10p_vs_optuna_hardest.png      # paper figure
+├── optany_b2000/problem_<i>/gpt-5.1/<seed>/<timestamp>/
+│   ├── gepa_state.bin     # full GEPA optimizer checkpoint
+│   ├── eval_log.jsonl     # per-call objective trace
+│   └── results.json
+└── optuna_b2000/problem_<i>/
+    ├── seed_<0..9>/                   # 10 seeds per problem
+    └── <timestamp>.json               # aggregated results
 ```
 
 Restore any `gepa_state.bin` with `gepa.GEPAState.load()` to inspect the candidate pool, Pareto frontier, and per-iteration solver code.
