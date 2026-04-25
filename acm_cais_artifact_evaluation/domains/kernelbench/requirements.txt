@@ -1,0 +1,14 @@
+# KernelBench (§5.5) — Python deps for re-running on a V100.
+# Install with: pip install -r requirements.txt
+# Plus install this artifact's gepa package: pip install -e ../../..
+
+torch>=2.1
+numpy
+dspy>=3.0
+litellm
+openai
+anthropic
+google-generativeai
+fasteners
+ninja
+pybind11

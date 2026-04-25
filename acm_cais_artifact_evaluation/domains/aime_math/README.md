@@ -1,0 +1,31 @@
+# AIME Prompt Optimization (§5.4)
+
+**Paper claim.** Optimizing a system prompt for GPT-4.1-mini on AIME (training set: AIME 2022–2024, test set: AIME 2025) raises test accuracy **46.67% → 60.00%** (+13.3pp). Validation reaches 57.78%.
+
+## Code (this folder)
+
+- `main.py`, `utils.py` — runnable optany pipeline (copied from `examples/aime_math/`).
+
+## Reproduction
+
+`main.py` is wired to use `./logs/` as the GEPA run directory. Because the bundled `logs/gepa_state.bin` already exists, GEPA will load that checkpoint and resume from the paper run rather than starting from scratch — letting reviewers verify the optimized prompt immediately.
+
+```bash
+export OPENAI_API_KEY=<your-key>
+uv run python main.py            # resumes from bundled state
+```
+
+To run a fresh optimization instead, delete (or move) `logs/gepa_state.bin` first.
+
+## What's in `logs/`
+
+| File | Purpose |
+|---|---|
+| `run.log` | Training trajectory + test eval. Look for `Iteration 0: Base program full valset score: 0.4666...` (baseline), `Iteration 33: Best valset aggregate score so far: 0.5777...` (val), `Average Metric: 14.00 / 30 (46.7%)` (base test), and the closing line `Test score improved from 46.67% to 60.00%!` (best test) |
+| `logs/best_prompt.txt` | The optimized system prompt — verbatim Figure 5 in the paper |
+| `logs/aime_plot.png` | Optimization-progress plot |
+| `logs/generated_best_outputs_valset/` | Per-validation-task JSON: prompt, model answer, ground truth, score, at tracked iterations |
+
+Trailing post-evaluation plotting tracebacks (a known DSPy GEPAState attribute-lookup quirk) have been truncated from `run.log` because they do not affect the reported score.
+
+`logs/gepa_state.bin` is the full GEPA optimizer checkpoint (128 KB) — restore with `gepa.GEPAState.load()` to inspect the candidate pool, Pareto frontier, and per-iteration scores.
