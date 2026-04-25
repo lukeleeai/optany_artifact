@@ -50,6 +50,27 @@ class StateTracker:
         self.logs = []
         self.log_dir = log_dir
 
+        # If we are resuming an existing run dir (e.g. the bundled paper run),
+        # load the prior tracker log so we (a) preserve the historical best
+        # score for downstream prints / refinement seeding, and (b) don't
+        # overwrite the paper-matching state_tracker_logs.json on first record().
+        prior = os.path.join(log_dir, "state_tracker_logs.json")
+        if os.path.exists(prior):
+            try:
+                with open(prior) as f:
+                    prior_logs = json.load(f)
+                if prior_logs:
+                    self.logs = prior_logs
+                    last = prior_logs[-1]
+                    self.metric_calls = last.get("metric_calls", 0)
+                    self.best_score = last.get("best_score", 0.0)
+                    sol = last.get("best_solution")
+                    if sol:
+                        self.best_solution = np.array(json.loads(sol))
+                    print(f"Resumed StateTracker from {prior}: best_score={self.best_score:.6f}, metric_calls={self.metric_calls}")
+            except Exception as e:
+                print(f"Could not resume StateTracker from {prior}: {e}")
+
     def record(
         self,
         score: Optional[float] = None,
