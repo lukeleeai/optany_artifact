@@ -4,7 +4,6 @@ Artifact for the paper **"optany: Unified Text Optimization can Outperform Speci
 
 ## What this artifact contains
 
-- `paper.pdf` — the submission PDF
 - `domains/` — one self-contained subdirectory per experimental domain claimed in the paper. Each domain folder is independent and includes its own `README.md`, runnable code, and any artifacts needed to verify the paper's claims.
 
 ## Quick repository map
