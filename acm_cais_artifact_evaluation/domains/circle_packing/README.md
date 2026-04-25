@@ -17,16 +17,15 @@ uv run --with-requirements requirements.txt python main.py    # resumes from bun
 
 To run a fresh optimization instead, delete (or move) `logs/gepa_state.bin` first.
 
-## What's in `logs/`
+## `logs/`
 
 | File | Purpose |
 |---|---|
-| `state_tracker_logs.json` | Per-iteration optimizer state. Best recorded score: `2.635983362593453` (search the file for this string). Contains the evolved Python solver code at each iteration along with its evaluated sum-of-radii |
+| `state_tracker_logs.json` | Per-iteration optimizer state. Best recorded score: `2.635983362593453`. Contains the evolved Python solver code at each iteration along with its evaluated sum-of-radii |
 | `generated_best_outputs_valset/` | Per-task outputs from the best candidate |
+| `gepa_state.bin` | Full GEPA optimizer checkpoint — restore with `gepa.GEPAState.load()` to inspect the candidate pool |
 
-`gepa_state.bin` is the full GEPA optimizer checkpoint (3.2 MB) — restore with `gepa.GEPAState.load()` to inspect the candidate pool. `state_tracker_logs.json` is human-readable and contains the full score trajectory and best artifact code.
-
-## Comparison table (from `state_tracker_logs.json`)
+## Comparison table
 
 | Rank | Method | Sum of Radii |
 |---|---|---|

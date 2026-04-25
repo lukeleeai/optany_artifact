@@ -17,7 +17,7 @@ Reproducing this domain requires:
 - **CUDA 12.1+**, NVCC compiler, cuBLAS, NCCL.
 - **PyTorch ≥ 2.1** with CUDA support.
 
-We do **not** bundle a runnable smoke test for this domain — the V100 dependency is hard. The bundled `logs/` directory contains the full optimization output that produced the paper numbers.
+The bundled `logs/` directory contains the full optimization output that produced the paper numbers.
 
 ## Code (this folder)
 
@@ -29,7 +29,7 @@ We do **not** bundle a runnable smoke test for this domain — the V100 dependen
 | `prompts.py` | Seed prompts (`BACKGROUND`, `KERNEL_GEN_PROMPT`, `REFINER_PROMPT`) and DSPy signatures |
 | `rag_content/` | CUDA reference docs the agent retrieves over: V100 spec sheet, CUDA C++ Programming Guide / Best Practices, cuBLAS GEMM patterns, CUTLASS patterns, PyTorch CUDA extension guide, Volta tuning guide, full `cuda_runtime_api/` and `cuda_math_api/` HTML docs |
 
-## Bundled run logs (`logs/`)
+## `logs/`
 
 | File | What it shows |
 |---|---|

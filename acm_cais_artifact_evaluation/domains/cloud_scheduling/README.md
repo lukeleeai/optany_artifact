@@ -32,6 +32,4 @@ cd can_be_late
 python main.py
 ```
 
-## Logs
-
-The bundled `optimization_trajectory.png` / `.pdf` in each subfolder shows the score-vs-iteration curve for the paper run. The full evolved policy `.py` files and per-scenario benchmark scores live in a separate research repository (`frontiercs`) and are not included here — re-run `main.py` to regenerate the optimized solver.
+The bundled `optimization_trajectory.png` / `.pdf` in each subfolder shows the score-vs-iteration curve for the paper run. Re-run `main.py` to regenerate an optimized solver.

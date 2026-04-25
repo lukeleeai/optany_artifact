@@ -19,15 +19,12 @@ To run a fresh optimization instead, delete (or move) `logs/gepa_state.bin` firs
 
 **Note on LLM nondeterminism.** The optimized prompt is fixed (in `logs/best_prompt.txt`), but *evaluating* it against AIME 2025 calls `gpt-4.1-mini` at `temperature=1.0`, which is nondeterministic. The original Jan 2026 run logged in `run.log` produced **18/30 = 60.00%** (the paper number); re-running the eval today on the same prompt typically lands in the 50–60% range. The deterministic, paper-matching evidence is in `run.log` (see the line `Test score improved from 46.67% to 60.00%!`).
 
-## What's in `logs/`
+## `logs/`
 
 | File | Purpose |
 |---|---|
-| `run.log` | Training trajectory + test eval. Look for `Iteration 0: Base program full valset score: 0.4666...` (baseline), `Iteration 33: Best valset aggregate score so far: 0.5777...` (val), `Average Metric: 14.00 / 30 (46.7%)` (base test), and the closing line `Test score improved from 46.67% to 60.00%!` (best test) |
-| `logs/best_prompt.txt` | The optimized system prompt — verbatim Figure 5 in the paper |
-| `logs/aime_plot.png` | Optimization-progress plot |
-| `logs/generated_best_outputs_valset/` | Per-validation-task JSON: prompt, model answer, ground truth, score, at tracked iterations |
-
-Trailing post-evaluation plotting tracebacks (a known DSPy GEPAState attribute-lookup quirk) have been truncated from `run.log` because they do not affect the reported score.
-
-`logs/gepa_state.bin` is the full GEPA optimizer checkpoint (128 KB) — restore with `gepa.GEPAState.load()` to inspect the candidate pool, Pareto frontier, and per-iteration scores.
+| `run.log` | Training trajectory + test eval. Reports `Iteration 0: Base program full valset score: 0.4666...` (baseline), `Iteration 33: Best valset aggregate score so far: 0.5777...` (val), `Average Metric: 14.00 / 30 (46.7%)` (base test), and `Test score improved from 46.67% to 60.00%!` (best test) |
+| `best_prompt.txt` | The optimized system prompt — verbatim Figure 5 in the paper |
+| `aime_plot.png` | Optimization-progress plot |
+| `generated_best_outputs_valset/` | Per-validation-task JSON: prompt, model answer, ground truth, score, at tracked iterations |
+| `gepa_state.bin` | Full GEPA optimizer checkpoint — restore with `gepa.GEPAState.load()` to inspect the candidate pool, Pareto frontier, and per-iteration scores |

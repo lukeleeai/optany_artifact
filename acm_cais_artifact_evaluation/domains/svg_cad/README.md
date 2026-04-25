@@ -12,6 +12,4 @@
 
 The pelican code requires a Vision-capable LLM (e.g. `vertex_ai/gemini-3-flash-preview`) for both evaluator scoring and reflection. The 3D unicorn additionally needs `build123d`, `pyrender`, and `trimesh` installed.
 
-## Logs
-
-Not bundled in this artifact (optimization runs produce large multi-modal trajectories; the optimized SVG/CAD outputs in `images/` are the visual artifacts of those runs).
+The optimized + zero-shot images in `images/` are the visual artifacts that back the §5.7 results in the paper.

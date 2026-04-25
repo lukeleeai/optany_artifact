@@ -17,19 +17,16 @@ uv run python main.py            # resumes from bundled state
 
 To run a fresh optimization instead, delete (or move) `logs/gepa_state.bin` first.
 
-## Bundled run logs (`logs/`)
+## `logs/`
 
-
-| File                                                 | What it shows                                                                                      |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `test_run.log`                                       | Test-set evaluation. Headline lines: `Seed: 130/400 (32.5%)`, `Best: 358/400 (89.5%)`, `Δ: +57.0%` |
-| `run.log`                                            | Full training trajectory                                                                           |
-| `agent_architecture.md`                              | Human-readable description of the evolved 4-component agent                                        |
-| `best_agent.py`                                      | The final optimized agent code                                                                     |
-| `all_candidates.json`, `candidate_eval_results.json` | Per-iteration candidates with per-task scores                                                      |
-| `test_results.json`                                  | Per-task test outcomes                                                                             |
-| `*.png`                                              | Optimization-progress and candidate cost/accuracy plots                                            |
-| `generated_best_outputs_valset/`                     | Validation outputs from the best candidate                                                         |
-
-
-`gepa_state.bin` is the full GEPA optimizer checkpoint (68 MB) — restore with `gepa.GEPAState.load()` to inspect the candidate pool, Pareto frontier, and per-iteration scores.
+| File | Purpose |
+| --- | --- |
+| `test_run.log` | Test-set evaluation. Reports `Seed: 130/400 (32.5%)`, `Best: 358/400 (89.5%)`, `Δ: +57.0%` |
+| `run.log` | Full training trajectory |
+| `agent_architecture.md` | Human-readable description of the evolved 4-component agent |
+| `best_agent.py` | The final optimized agent code |
+| `all_candidates.json`, `candidate_eval_results.json` | Per-iteration candidates with per-task scores |
+| `test_results.json` | Per-task test outcomes |
+| `*.png` | Optimization-progress and candidate cost/accuracy plots |
+| `generated_best_outputs_valset/` | Validation outputs from the best candidate |
+| `gepa_state.bin` | Full GEPA optimizer checkpoint — restore with `gepa.GEPAState.load()` to inspect the candidate pool, Pareto frontier, and per-iteration scores |

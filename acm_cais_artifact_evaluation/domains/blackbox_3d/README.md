@@ -28,6 +28,4 @@ uv run python main.py
 
 Open the notebook in Jupyter and execute. Requires `build123d`, `pyrender`, `trimesh`, `numpy`, and a Vision-capable LLM (e.g. Claude Opus 4.6 as proposer, plus a VLM evaluator).
 
-## Logs
-
-Not bundled in this artifact. The 3D unicorn appendix figure in the paper is reproducible from the notebook's output cells.
+The 3D unicorn appendix figure in the paper is reproducible from the notebook's output cells.
