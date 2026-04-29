@@ -1,0 +1,1073 @@
+Loaded 45 training examples
+Loaded 45 validation examples
+Loaded 30 test examples
+
+Starting GEPA Optimization for Math Problems...
+Iteration 0: Base program full valset score: 0.4666666666666667 over 45 / 45 examples
+Iteration 1: Selected program 0 score: 0.4666666666666667
+Iteration 1: Proposed new text for prompt: Solve the math problem carefully. Show all important algebraic or logical steps, verify that any derived conditions are both necessary and sufficient, and explicitly count or list all solutions when the problem asks for “how many.” Then provide the final answer as a single number on its own line at the end.
+Iteration 1: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 2: Selected program 0 score: 0.4666666666666667
+Iteration 2: Proposed new text for prompt: Solve the math problem carefully and rigorously. Show a clear, structured step-by-step solution that focuses on correctness and avoids unnecessary detours. Explicitly justify key transformations and check for hidden conditions (like roots of unity, symmetry, or overcounting). Conclude with the final answer stated clearly as a single number (with no extra commentary).
+Iteration 2: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 3: Selected program 0 score: 0.4666666666666667
+Iteration 3: Proposed new text for prompt: Solve the math problem carefully and accurately. Show clear, logically ordered work, but avoid unnecessary digressions or overcomplicated approaches. Prioritize correctness and concise reasoning over length.
+
+Requirements:
+- Parse the problem precisely and identify what is being asked.
+- Use standard, reliable methods; avoid speculative or needlessly complex setups.
+- Track all variables and constraints consistently; check that geometric or algebraic assumptions do not contradict given data.
+- Where multiple interpretations are possible, choose the one that directly matches the wording and typical contest conventions.
+- If a long or intricate approach develops, periodically simplify or reframe it to keep the solution focused.
+
+Output format:
+1. Provide a step-by-step solution with enough detail to verify each key transition (equations, identities, geometric relations).
+2. Explicitly perform algebra and simplifications that affect the final answer (do not skip critical steps).
+3. End with the final answer as a single number on its own line.
+Iteration 3: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 4: Selected program 0 score: 0.4666666666666667
+Iteration 4: Proposed new text for prompt: Solve the math problem carefully. Show your reasoning step by step, but keep it as concise as possible. Make sure the final answer is clearly stated as a single number at the end.
+Iteration 4: New subsample score 1.0 is not better than old score 2.0, skipping
+Iteration 5: Selected program 0 score: 0.4666666666666667
+Iteration 5: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step, explicitly handling edge cases and checking that your argument covers all possibilities. When a combinatorial or optimization problem asks for a maximum/minimum value or for the total number of configurations, do not assume that an extremal construction is unique or that a standard theorem applies without verifying all conditions; instead, systematically justify that:
+- your construction satisfies all constraints,
+- it actually achieves the claimed extremal value, and
+- no other constructions or parameter choices can do better or yield additional valid cases.
+
+For counting problems, perform thorough casework when needed, ensuring cases are:
+- exhaustive (cover all possibilities),
+- mutually exclusive (no double-counting),
+and justify any symmetry or classification you use.
+
+For problems involving “no arithmetic progression” or similar forbidden-pattern conditions, explicitly:
+- list the fixed elements,
+- derive all possible arithmetic progressions (or forbidden patterns) they can participate in with variable elements, and
+- solve the resulting equations in integers, checking that each solution respects all inequalities and bounds before including or excluding it.
+
+For optimization under constraints (e.g., sums and absolute values with ordered variables), use inequality arguments (like rearrangement, averaging, AM-GM, or pigeonhole reasoning) to bound key variables, and then:
+- verify that your proposed extremal configuration actually attains those bounds, and
+- ensure the ordering and all given equalities are satisfied.
+
+Throughout the solution, avoid skipping algebraic or logical justification for critical steps (especially when excluding cases). After finishing the reasoning, compute the final numerical result carefully, and present the final answer as a single number on its own line.
+Iteration 5: New subsample score 1.0 is better than old score 0.0. Continue to full eval and add to candidate pool.
+Iteration 5: Found a better program on the valset with score 0.4888888888888889.
+Iteration 5: Valset score for new program: 0.4888888888888889 (coverage 45 / 45)
+Iteration 5: Val aggregate for new program: 0.4888888888888889
+Iteration 5: Individual valset scores for new program: {5: 0.0, 6: 1.0, 21: 0.0, 0: 0.0, 1: 0.0, 2: 0.0, 3: 0.0, 4: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 0.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 0.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 5: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 0.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 5: Valset pareto front aggregate score: 0.6444444444444445
+Iteration 5: Updated valset pareto front programs: {0: {0, 1}, 1: {0}, 2: {0, 1}, 3: {0}, 4: {0, 1}, 5: {0}, 6: {0, 1}, 7: {0, 1}, 8: {0, 1}, 9: {1}, 10: {0, 1}, 11: {0, 1}, 12: {1}, 13: {1}, 14: {0, 1}, 15: {0, 1}, 16: {0, 1}, 17: {0}, 18: {1}, 19: {0, 1}, 20: {0, 1}, 21: {0}, 22: {1}, 23: {0, 1}, 24: {0, 1}, 25: {1}, 26: {0, 1}, 27: {0, 1}, 28: {0, 1}, 29: {0, 1}, 30: {0, 1}, 31: {0, 1}, 32: {0}, 33: {1}, 34: {1}, 35: {0, 1}, 36: {0, 1}, 37: {0, 1}, 38: {0, 1}, 39: {0, 1}, 40: {0, 1}, 41: {0}, 42: {0, 1}, 43: {0, 1}, 44: {0, 1}}
+Iteration 5: Best valset aggregate score so far: 0.4888888888888889
+Iteration 5: Best program as per aggregate score on valset: 1
+Iteration 5: Best score on valset: 0.4888888888888889
+Iteration 5: Linear pareto front program index: 1
+Iteration 5: New program candidate index: 1
+Iteration 6: Selected program 0 score: 0.4666666666666667
+Iteration 6: Proposed new text for prompt: Solve the math problem carefully. Show clear, correct reasoning, and then provide the final answer as a single number on its own line at the very end. Do not round or approximate exact values.
+Iteration 6: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 6: Found a better program on the valset with score 0.5111111111111111.
+Iteration 6: Valset score for new program: 0.5111111111111111 (coverage 45 / 45)
+Iteration 6: Val aggregate for new program: 0.5111111111111111
+Iteration 6: Individual valset scores for new program: {11: 1.0, 15: 1.0, 20: 1.0, 0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 0.0, 12: 0.0, 13: 0.0, 14: 1.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 21: 0.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 0.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 6: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 6: Valset pareto front aggregate score: 0.6888888888888889
+Iteration 6: Updated valset pareto front programs: {0: {0, 1, 2}, 1: {0, 2}, 2: {0, 1, 2}, 3: {0, 2}, 4: {0, 1, 2}, 5: {0, 2}, 6: {0, 1, 2}, 7: {0, 1, 2}, 8: {0, 1, 2}, 9: {1}, 10: {0, 1, 2}, 11: {2}, 12: {1}, 13: {1}, 14: {0, 1, 2}, 15: {0, 1, 2}, 16: {0, 1, 2}, 17: {0, 2}, 18: {1, 2}, 19: {0, 1, 2}, 20: {0, 1, 2}, 21: {0}, 22: {1, 2}, 23: {0, 1, 2}, 24: {0, 1, 2}, 25: {1}, 26: {0, 1, 2}, 27: {0, 1}, 28: {0, 1, 2}, 29: {0, 1, 2}, 30: {0, 1, 2}, 31: {0, 1}, 32: {0}, 33: {1, 2}, 34: {1, 2}, 35: {0, 1, 2}, 36: {2}, 37: {0, 1, 2}, 38: {0, 1, 2}, 39: {0, 1, 2}, 40: {0, 1, 2}, 41: {0, 2}, 42: {0, 1, 2}, 43: {0, 1, 2}, 44: {0, 1, 2}}
+Iteration 6: Best valset aggregate score so far: 0.5111111111111111
+Iteration 6: Best program as per aggregate score on valset: 2
+Iteration 6: Best score on valset: 0.5111111111111111
+Iteration 6: Linear pareto front program index: 2
+Iteration 6: New program candidate index: 2
+Iteration 7: Selected program 2 score: 0.5111111111111111
+Iteration 7: Proposed new text for prompt: Solve the math problem carefully. First, restate the problem in your own words and outline a plan. Then carry out a rigorous, fully correct solution with justified steps (avoiding heuristic guessing or unchecked approximations). If you use coordinate geometry or algebraic parameterization, simplify systematically and verify any candidate values. At the end, clearly state the final answer as a single number on its own line, with no additional text. Do not round or approximate exact values; keep expressions exact (e.g., using radicals or fractions).
+Iteration 7: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 8: Selected program 1 score: 0.4888888888888889
+Iteration 8: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step, but do not overcomplicate or over-formalize routine algebra or counting once the structure is clear. Aim for a balance between rigor and efficiency.
+
+1. General structure
+- Begin by restating or reformulating the problem in your own words if it clarifies the setup.
+- Identify key variables, constraints, and what must be computed or proved.
+- When helpful, choose a coordinate system, substitution, or reparameterization that simplifies the structure early.
+
+2. Step-by-step reasoning with explicit checks
+- Proceed logically in small, justified steps; avoid large unexplained jumps in critical arguments (e.g., inequalities, divisibility, extremal choices, case splits).
+- Explicitly note and use relevant necessary conditions (like parity, gcd/divisibility, magnitude bounds) before embarking on heavy casework or enumeration.
+- Clearly indicate when you are:
+  - assuming something for the sake of contradiction,
+  - fixing a variable and iterating over its values,
+  - or exploiting symmetry to reduce cases.
+- When you impose modular constraints in Diophantine or counting problems, track all implications systematically (e.g., parity → factor out 2, then mod 3 → factor out 3, etc.), and confirm that no branch of solutions is lost.
+
+3. Handling combinatorial counting and casework
+- For combinatorial enumeration (especially with constraints like “no forbidden patterns”), structure your solution as:
+  - First, a clean encoding/representation of configurations (e.g., patterns on columns, residues, or types).
+  - Then, a partition into cases that are:
+    - exhaustive (cover all possibilities),
+    - mutually exclusive (no double counting).
+- Justify any reduction to simpler patterns (like grouping vertices into opposite pairs or interpreting a polygon as a grid), and prove the reduction is bijective with the original objects.
+- In each case:
+  - Describe the constraints clearly in terms of the chosen encoding.
+  - Count with standard tools (binomial coefficients, stars and bars, inclusion–exclusion, etc.), explaining why each factor or term appears.
+- For inclusion–exclusion or extremal arguments, explicitly state:
+  - what is being counted by each term,
+  - why subtraction/addition avoids double counting,
+  - and why no further correction terms are needed.
+
+4. Optimization and extremal problems
+- For optimization under constraints (e.g., sums, absolute values, order conditions):
+  - Use inequality tools (AM-GM, Cauchy, rearrangement, convexity/averaging) where appropriate, *but* check all hypotheses (e.g., nonnegativity, ordering, equality conditions).
+  - When you present a candidate extremal configuration, verify explicitly that:
+    - it satisfies all original constraints,
+    - it actually attains the bound you derived,
+    - varying away from it (within the constraints) cannot improve the objective (give a short argument or inequality to show this).
+- Avoid assuming uniqueness of extremal constructions unless you either prove it or it is irrelevant to the asked quantity (e.g., only the extremal value is requested).
+
+5. Arithmetic progressions and forbidden patterns
+- For problems involving “no arithmetic progression” or similar forbidden configurations:
+  - Explicitly list the fixed elements or structural constraints.
+  - Derive all integer equations that describe when a variable element could complete a forbidden pattern with already-chosen elements.
+  - Solve these equations in integers and check all inequalities and bounds before including or excluding candidates.
+
+6. Generating functions and Diophantine equations
+- When using generating functions:
+  - Write down the generating function clearly, factor or rearrange it into standard pieces, and interpret each factor combinatorially.
+  - When extracting a coefficient, reduce to a clean counting problem for integer solutions to a linear equation if possible.
+- For linear Diophantine problems (e.g., counting nonnegative integer solutions to a sum with given coefficients):
+  - Use gcd and modular arguments early to reduce variables (e.g., factor out common gcds, enforce parity or residue constraints up front).
+  - If you introduce parameters (like replacing variables by new ones after modular reasoning), verify the transformation is bijective and that ranges (nonnegativity, bounds) are preserved.
+  - Prefer transformations that compress multiple congruence constraints into a single “stars and bars” or combination count when possible, instead of doing large manual enumerations.
+
+7. Numerical care and validation
+- At critical numeric steps (e.g., solving small systems, final coefficient extraction, or determining a discrete parameter), avoid approximate arithmetic unless the answer is genuinely real-valued. Prefer exact algebraic manipulation.
+- If you derive intermediate real quantities (e.g., speeds, times) in geometry/physics-flavored problems, keep them symbolic as long as feasible, and verify that the final discrete parameter is exact.
+- Do a quick consistency check at the end:
+  - Plug the answer back into core constraints to ensure they are satisfied (e.g., recompute times, re-check that counts match conditions).
+  - Check edge cases: ensure you haven’t implicitly assumed a variable is nonzero, positive, or integer without justification.
+
+8. Presentation and final answer
+- Organize the solution in a logical progression of clearly labeled steps or paragraphs; avoid meandering reasoning.
+- Do not introduce unnecessary notation or overlong technical digressions once the main combinatorial or algebraic structure is identified.
+- Unless the problem explicitly asks for multiple forms, present the final numeric result cleanly on its own line at the end:
+  - For integer answers, give a single integer on its own line.
+  - For expressions, simplify to a reasonably compact exact form before presenting.
+
+After finishing the reasoning and any checks, put the final answer as a single number or simplest required expression on its own line at the very end of the solution.
+Iteration 8: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 9: Selected program 2 score: 0.5111111111111111
+Iteration 9: Proposed new text for prompt: Solve the math problem carefully. First, work out the solution step by step with clear, correct reasoning (you may include intermediate explanations or derivations). After you are completely finished, output the final answer as a single number on its own line at the very end, with no additional text on that line. Do not round or approximate exact values.
+Iteration 9: New subsample score 2.0 is better than old score 0.0. Continue to full eval and add to candidate pool.
+Iteration 9: Valset score for new program: 0.4444444444444444 (coverage 45 / 45)
+Iteration 9: Val aggregate for new program: 0.4444444444444444
+Iteration 9: Individual valset scores for new program: {17: 1.0, 36: 0.0, 40: 1.0, 0: 0.0, 1: 0.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 0.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 0.0, 11: 0.0, 12: 0.0, 13: 0.0, 14: 1.0, 15: 0.0, 16: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 0.0, 33: 1.0, 34: 0.0, 35: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 41: 0.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 9: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 9: Valset pareto front aggregate score: 0.7111111111111111
+Iteration 9: Updated valset pareto front programs: {0: {0, 1, 2, 3}, 1: {0, 2}, 2: {0, 1, 2, 3}, 3: {0, 2, 3}, 4: {0, 1, 2, 3}, 5: {0, 2}, 6: {0, 1, 2, 3}, 7: {0, 1, 2, 3}, 8: {0, 1, 2, 3}, 9: {1}, 10: {0, 1, 2, 3}, 11: {2}, 12: {1}, 13: {1}, 14: {0, 1, 2, 3}, 15: {0, 1, 2}, 16: {0, 1, 2, 3}, 17: {0, 2, 3}, 18: {1, 2, 3}, 19: {0, 1, 2, 3}, 20: {0, 1, 2, 3}, 21: {0, 3}, 22: {1, 2, 3}, 23: {0, 1, 2, 3}, 24: {0, 1, 2, 3}, 25: {1, 3}, 26: {0, 1, 2, 3}, 27: {0, 1}, 28: {0, 1, 2, 3}, 29: {0, 1, 2, 3}, 30: {0, 1, 2, 3}, 31: {0, 1, 3}, 32: {0}, 33: {1, 2, 3}, 34: {1, 2}, 35: {0, 1, 2, 3}, 36: {2}, 37: {0, 1, 2, 3}, 38: {0, 1, 2, 3}, 39: {0, 1, 2, 3}, 40: {3}, 41: {0, 2}, 42: {0, 1, 2, 3}, 43: {0, 1, 2, 3}, 44: {0, 1, 2, 3}}
+Iteration 9: Best valset aggregate score so far: 0.5111111111111111
+Iteration 9: Best program as per aggregate score on valset: 2
+Iteration 9: Best score on valset: 0.5111111111111111
+Iteration 9: Linear pareto front program index: 2
+Iteration 9: New program candidate index: 3
+Iteration 10: Selected program 2 score: 0.5111111111111111
+Iteration 10: Proposed new text for prompt: Solve the math problem carefully. Show clear, correct reasoning that directly targets the requested final result, and avoid speculative or hand-wavy arguments. Explicitly check or justify any key algebraic steps or case splits. If you realize a line of reasoning leads to a contradiction or dead end, clearly identify it as such and restart from a correct earlier point instead of guessing.
+
+Use these structural guidelines:
+- Restate the problem briefly in your own words.
+- Set up notation and equations cleanly before manipulating them.
+- When solving equations or counting cases, state the constraints (e.g., integrality, ranges) before applying them.
+- If you invoke a known theorem (e.g., Ptolemy, Vieta, power of a point), name it and show how it applies in this context.
+
+At the end, provide the final answer as a single number or expression on its own line, with no extra text. Do not round or approximate exact values unless the problem explicitly asks for a decimal approximation.
+Iteration 10: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 10: Valset score for new program: 0.4888888888888889 (coverage 45 / 45)
+Iteration 10: Val aggregate for new program: 0.4888888888888889
+Iteration 10: Individual valset scores for new program: {3: 1.0, 38: 1.0, 39: 0.0, 0: 0.0, 1: 0.0, 2: 0.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 0.0, 11: 0.0, 12: 0.0, 13: 0.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 28: 1.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 0.0, 33: 0.0, 34: 0.0, 35: 1.0, 36: 1.0, 37: 1.0, 40: 0.0, 41: 0.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 10: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 10: Valset pareto front aggregate score: 0.7555555555555555
+Iteration 10: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4}, 1: {0, 2}, 2: {0, 1, 2, 3, 4}, 3: {0, 2, 3, 4}, 4: {0, 1, 2, 3, 4}, 5: {0, 2, 4}, 6: {0, 1, 2, 3, 4}, 7: {0, 1, 2, 3, 4}, 8: {0, 1, 2, 3, 4}, 9: {1}, 10: {0, 1, 2, 3, 4}, 11: {2}, 12: {1}, 13: {1}, 14: {0, 1, 2, 3, 4}, 15: {0, 1, 2, 4}, 16: {0, 1, 2, 3, 4}, 17: {0, 2, 3}, 18: {1, 2, 3, 4}, 19: {0, 1, 2, 3, 4}, 20: {0, 1, 2, 3, 4}, 21: {0, 3, 4}, 22: {1, 2, 3, 4}, 23: {0, 1, 2, 3, 4}, 24: {0, 1, 2, 3, 4}, 25: {1, 3, 4}, 26: {0, 1, 2, 3, 4}, 27: {0, 1}, 28: {4}, 29: {0, 1, 2, 3, 4}, 30: {0, 1, 2, 3, 4}, 31: {0, 1, 3, 4}, 32: {0}, 33: {1, 2, 3}, 34: {1, 2}, 35: {0, 1, 2, 3, 4}, 36: {2, 4}, 37: {0, 1, 2, 3, 4}, 38: {4}, 39: {0, 1, 2, 3, 4}, 40: {3}, 41: {0, 2}, 42: {0, 1, 2, 3, 4}, 43: {0, 1, 2, 3, 4}, 44: {0, 1, 2, 3, 4}}
+Iteration 10: Best valset aggregate score so far: 0.5111111111111111
+Iteration 10: Best program as per aggregate score on valset: 2
+Iteration 10: Best score on valset: 0.5111111111111111
+Iteration 10: Linear pareto front program index: 2
+Iteration 10: New program candidate index: 4
+Iteration 11: Selected program 1 score: 0.4888888888888889
+Iteration 11: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step, but keep the explanation as concise as possible while still being fully rigorous.
+
+General requirements:
+- Explicitly state your notation and any substitutions you make.
+- Track all domain/validity conditions (e.g., positivity, integrality, parity, inequality constraints) and use them when accepting or rejecting solutions.
+- When you introduce an equation by transforming a previous one (e.g., squaring, taking logs, dividing by an expression), explicitly mention any new restrictions or potential extraneous solutions created, and check them at the end.
+
+Casework and completeness:
+- When a problem naturally breaks into cases, clearly list the cases, explain why they are exhaustive and mutually exclusive, and handle each one systematically (not just by examples).
+- For counting or configuration problems, avoid handwavy “clearly these are all” arguments; instead, justify that:
+  - every configuration you count satisfies all constraints, and
+  - any configuration satisfying the constraints must fall into one of the described cases or patterns.
+
+Optimization and extremal arguments:
+- For maximum/minimum or inequality problems:
+  - Clearly identify the quantity being optimized and the feasible set.
+  - Use appropriate tools (algebraic manipulation, inequalities like AM-GM/Cauchy-Schwarz/Jensen, convexity, symmetry, or calculus where appropriate) to bound the quantity.
+  - After finding a candidate extremal configuration, explicitly verify:
+    - it satisfies all original constraints (including integrality/order conditions), and
+    - no other configuration can do better (e.g., by proving your bound is tight or characterizing all equality cases).
+
+Forbidden-pattern problems (e.g., no arithmetic progression):
+- List the fixed elements explicitly.
+- For each such element, derive all algebraic conditions that a variable element would need to satisfy to create a forbidden pattern.
+- Solve these conditions in integers (or the relevant domain) and check that every candidate solution obeys all bounds and inequalities before including or excluding it.
+
+Complex numbers, logs, and functional equations:
+- When using polar/argument forms, parameterizations (like \(z = re^{i\theta}\)), or logarithmic identities, always check the allowed ranges (e.g., \(r>0\), bases not equal to 1, arguments positive).
+- If you square, take square roots, or invoke multi-valued functions (like arguments or inverse trig), discuss branches or sign choices where relevant and justify which ones are admissible.
+
+Final answer format:
+- After completing the reasoning, simplify all expressions carefully and check any arithmetic.
+- Present the final numerical result on its own line as a single number, with no additional text on that line.
+Iteration 11: New subsample score 2.0 is not better than old score 3.0, skipping
+Iteration 12: Selected program 2 score: 0.5111111111111111
+Iteration 12: Proposed new text for prompt: Solve the math problem carefully. Show clear, correct reasoning in a structured way (using algebraic or geometric arguments rather than numerical trial-and-error), and double-check key steps. If the problem asks for an exact value, keep all expressions exact (no decimal approximations in the final derivation). At the end, provide the final answer as a single number on its own line, with no additional text, and do not round or approximate exact values.
+Iteration 12: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 13: Selected program 0 score: 0.4666666666666667
+Iteration 13: Proposed new text for prompt: Solve the math problem carefully and accurately. Show clear, logically ordered steps, avoid unnecessary numeric approximation when exact algebra is feasible, and explicitly verify any candidate result against the original conditions before concluding. Provide the final answer as a single number.
+Iteration 13: New subsample score 1.0 is better than old score 0.0. Continue to full eval and add to candidate pool.
+Iteration 13: Valset score for new program: 0.4 (coverage 45 / 45)
+Iteration 13: Val aggregate for new program: 0.4
+Iteration 13: Individual valset scores for new program: {19: 0.0, 22: 1.0, 30: 0.0, 0: 0.0, 1: 0.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 0.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 0.0, 11: 0.0, 12: 0.0, 13: 1.0, 14: 0.0, 15: 1.0, 16: 0.0, 17: 1.0, 18: 0.0, 20: 1.0, 21: 1.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 31: 0.0, 32: 0.0, 33: 0.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 13: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 0.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 13: Valset pareto front aggregate score: 0.7777777777777778
+Iteration 13: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5}, 1: {0, 2}, 2: {0, 1, 2, 3, 4, 5}, 3: {0, 2, 3, 4, 5}, 4: {0, 1, 2, 3, 4, 5}, 5: {0, 2, 4, 5}, 6: {0, 1, 2, 3, 4}, 7: {0, 1, 2, 3, 4, 5}, 8: {0, 1, 2, 3, 4, 5}, 9: {1}, 10: {0, 1, 2, 3, 4, 5}, 11: {2}, 12: {1}, 13: {1, 5}, 14: {0, 1, 2, 3, 4}, 15: {0, 1, 2, 4, 5}, 16: {0, 1, 2, 3, 4, 5}, 17: {0, 2, 3, 5}, 18: {1, 2, 3, 4}, 19: {0, 1, 2, 3, 4}, 20: {0, 1, 2, 3, 4, 5}, 21: {0, 3, 4, 5}, 22: {1, 2, 3, 4, 5}, 23: {0, 1, 2, 3, 4, 5}, 24: {0, 1, 2, 3, 4, 5}, 25: {1, 3, 4}, 26: {0, 1, 2, 3, 4, 5}, 27: {0, 1, 5}, 28: {4}, 29: {0, 1, 2, 3, 4, 5}, 30: {0, 1, 2, 3, 4, 5}, 31: {0, 1, 3, 4}, 32: {0}, 33: {1, 2, 3}, 34: {1, 2, 5}, 35: {0, 1, 2, 3, 4, 5}, 36: {2, 4}, 37: {0, 1, 2, 3, 4, 5}, 38: {4}, 39: {0, 1, 2, 3, 4, 5}, 40: {3}, 41: {0, 2}, 42: {0, 1, 2, 3, 4, 5}, 43: {5}, 44: {0, 1, 2, 3, 4, 5}}
+Iteration 13: Best valset aggregate score so far: 0.5111111111111111
+Iteration 13: Best program as per aggregate score on valset: 2
+Iteration 13: Best score on valset: 0.5111111111111111
+Iteration 13: Linear pareto front program index: 2
+Iteration 13: New program candidate index: 5
+Iteration 14: Selected program 1 score: 0.4888888888888889
+Iteration 14: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step in a clear, organized way, but avoid unnecessary repetition or over-elaboration.
+
+Core requirements for your solution:
+1. **Show all essential steps.**
+   - Justify each nontrivial algebraic manipulation, inequality step, or logical inference.
+   - When you introduce an equation or transformation, briefly indicate why it is valid.
+
+2. **Handle cases and edge conditions explicitly.**
+   - For problems that naturally split into cases (e.g., based on sign, equality of variables, or special parameter values), clearly list the cases.
+   - Ensure that:
+     - The cases are **mutually exclusive** (no overlap).
+     - The cases are **collectively exhaustive** (cover all possibilities).
+   - For each case, verify that any additional assumptions you made (like a denominator being nonzero) are actually satisfied.
+
+3. **Optimization and extremal problems (max/min/count).**
+   - When claiming a configuration is optimal (maximum/minimum) or that a particular value is extremal:
+     - Verify that your construction satisfies all given constraints.
+     - Give a clear argument that **no better value is possible**, using appropriate inequalities, bounding arguments, or structural reasoning.
+   - If you use a known theorem (e.g., AM-GM, Cauchy-Schwarz, Pigeonhole, rearrangement):
+     - Check and state that all conditions for applying it are satisfied.
+     - Tie the conclusion of the theorem explicitly to the quantity you are optimizing.
+   - If the problem involves counting configurations:
+     - Perform casework when necessary, and explicitly argue that you are not double-counting.
+     - Justify any use of symmetry or equivalence classes.
+
+4. **Forbidden patterns (e.g., no arithmetic progression).**
+   - When dealing with forbidden configurations:
+     - Clearly list any fixed elements you are conditioning on.
+     - Write down all potential instances of the forbidden pattern involving those fixed elements and one or more variable elements.
+     - Solve the resulting equations/conditions in integers (or the relevant domain), checking that all bounds, inequalities, and distinctness constraints are satisfied.
+     - Use these checks to rigorously include or exclude candidate elements or configurations.
+
+5. **Systems, algebraic identities, and functional relationships.**
+   - For systems of equations, explain how you combine, subtract, or substitute equations; do not skip essential algebra.
+   - When factoring polynomials, solving cubics/quadratics, or using Vieta’s formulas, indicate briefly how the factorization/roots are obtained and verify them (e.g., by substitution or by checking coefficients).
+   - When using symmetry (e.g., cyclic or symmetric in variables), state explicitly how the symmetry reduces the work and how it implies that all permutations/roles of variables have been considered.
+
+6. **Final answer presentation.**
+   - After completing your reasoning, explicitly state the final numerical or algebraic result on its own line.
+   - If the problem asks for a single number, present that number alone on the last line (optionally in LaTeX, e.g., `\(\boxed{45}\)`), with no surrounding text.
+
+Overall style:
+- Be concise but **logically complete**: avoid verbosity that does not contribute to the argument, but do not omit key justifications.
+- Prioritize clarity of structure:
+  - Use brief headings or paragraph breaks for major steps (e.g., “Step 1: Set up equations”, “Case 1: \(x = y\)”).
+  - Keep chains of equalities readable and annotated when the transformation is not obvious.
+Iteration 14: New subsample score 3.0 is not better than old score 3.0, skipping
+Iteration 15: Selected program 4 score: 0.4888888888888889
+Iteration 15: Proposed new text for prompt: Solve the math problem carefully. Show clear, correct reasoning that directly targets the requested final result, and avoid speculative or hand‑wavy arguments. Explicitly check or justify any key algebraic steps or case splits. If you realize a line of reasoning leads to a contradiction or dead end, clearly identify it as such and restart from a correct earlier point instead of guessing.
+
+Use these structural guidelines:
+- Restate the problem briefly in your own words, including what quantity is being asked for.
+- Set up notation and equations cleanly before manipulating them; define variables and constraints (such as ranges or integrality) explicitly.
+- When using casework, state all cases so they are mutually exclusive and collectively exhaustive, and summarize each case’s contribution before combining them.
+- If you invoke a known theorem or formula (e.g., Euler’s formula for planar graphs, Vieta’s formulas, power of a point, or a combinatorial identity), name it and show how its hypotheses are satisfied in this context.
+- Prefer direct, structurally simple methods (symmetry, recursion with a clearly stated recurrence, invariants, etc.) over ad‑hoc algebra that is hard to verify.
+
+Throughout the solution:
+- Keep expressions symbolic as long as reasonable; delay plugging in numeric values until the structure is clear.
+- Track probabilities, counts, or algebraic transformations step‑by‑step, and check that intermediate totals (like probabilities summing to 1 or region counts matching small test cases provided in the problem statement) are consistent.
+- When you derive a general formula, verify it against any small example explicitly given in the problem (for instance, the sample with m=3, n=2 regions) before using it to answer the main question.
+
+At the end, provide the final answer as a single number or expression on its own line, with no extra text. Do not round or approximate exact values unless the problem explicitly asks for a decimal approximation.
+Iteration 15: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 16: Selected program 1 score: 0.4888888888888889
+Iteration 16: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step, but keep it as concise and direct as possible while remaining fully rigorous.
+
+1. Structure and clarity
+- Introduce any substitutions (e.g., letting variables be logs, roots of unity, etc.) explicitly and justify why they are valid (e.g., positivity conditions for logs).
+- When you translate the problem into algebraic equations or systems, write them out clearly and label key equations when they are reused.
+- Use short, logically connected steps; avoid long, unstructured paragraphs of algebra.
+
+2. Justification and coverage
+- Ensure every transformation you use (algebraic manipulation, change of variables, polynomial factorization, root-of-unity arguments, etc.) is justified.
+- For systems of equations, either:
+  - solve them explicitly (substitution, elimination, matrix methods), or
+  - use a clearly stated linear-algebra or symmetry argument and verify its conditions.
+- When applying known theorems (e.g., about roots of unity, resultants, Vieta’s formulas), state the relevant form precisely and check that hypotheses (degree, leading coefficients, root sets) are satisfied.
+
+3. Extremal and counting problems
+- For optimization (max/min) or extremal combinatorics:
+  - Identify all constraints clearly.
+  - Construct at least one explicit configuration that attains the claimed extremal value and check it satisfies all constraints.
+  - Prove no better value is possible by deriving an inequality or bound from the constraints and showing your construction meets that bound with equality.
+- For counting problems:
+  - Organize casework so that cases are mutually exclusive and collectively exhaustive.
+  - If you use symmetry to reduce cases, explain the symmetry and why it does not miss or double-count any configurations.
+
+4. Forbidden-pattern problems (e.g., no arithmetic progressions)
+- List all fixed elements that are predetermined by the problem.
+- For each such fixed element, systematically derive which arithmetic progressions (or forbidden patterns) it can participate in with variable elements.
+- Solve the resulting equations in integers, checking each solution against all bounds and constraints before including or excluding it.
+- Make explicit why no additional forbidden patterns can arise beyond those you have checked.
+
+5. Algebraic and number-theoretic techniques
+- When working with logs, exponents, or products over roots of unity:
+  - Convert systematically to linear equations (e.g., in \(\log\) variables) or to polynomial identities.
+  - In root-of-unity products, explicitly connect the product to a concrete polynomial (like \(x^n-1\)) and show how evaluating that polynomial (or its resultant) at the roots of a quadratic (or other small-degree polynomial) yields the desired product.
+  - When using complex numbers, if you switch to polar form, compute magnitudes and arguments carefully and simplify trigonometric values (like specific cosines) explicitly.
+
+6. Arithmetic care
+- Perform all arithmetic (fractions, modular reductions, base conversions) carefully and in small, checkable steps.
+- For base conversions, show the division-by-base table and then rewrite the remainders in the correct order.
+- At the end, check any final numerical expressions (especially fractions and modular remainders) for simplification and correctness.
+
+7. Final answer format
+- After finishing the reasoning and verifying all constraints and edge cases, compute the final numerical result carefully.
+- Present the final answer on its own line, as a single number or expression exactly in the format requested by the problem (for example, just `33` or `321` or `585`), without extra commentary on that final line.
+Iteration 16: New subsample score 3.0 is not better than old score 3.0, skipping
+Iteration 17: Selected program 5 score: 0.4
+Iteration 17: Proposed new text for prompt: Solve the math problem carefully and accurately. Show clear, logically ordered steps, avoid unnecessary numeric approximation when exact algebra is feasible, and explicitly verify any candidate result against the original conditions before concluding.
+
+Unless explicitly instructed otherwise in the problem or system prompt, ensure the final answer is:
+- A single integer, with no units, words, or extra characters
+- Placed on its own line at the very end of your response
+
+If the correct result is not an integer (e.g., a fraction or radical), still present full derivations in exact form, but convert or simplify to the required integer value before giving the final output line. Do not include any formatting (such as LaTeX, words, or symbols like “\boxed{}”) in that final output line—only the integer itself.
+Iteration 17: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 18: Selected program 4 score: 0.4888888888888889
+Iteration 18: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define variables explicitly.
+   - State all constraints (e.g., integrality, ranges, geometric conditions) before using them.
+
+3. Show clear, logically ordered reasoning.
+   - Justify each important algebraic or geometric step.
+   - When you split into cases, state why each case is necessary and what assumptions define it.
+   - If you invoke a known theorem (e.g., Ptolemy, Power of a Point, similarity, Vieta), name it and show exactly how it applies in this context.
+
+4. Handle dead ends correctly.
+   - If you realize a line of reasoning leads to a contradiction or dead end, explicitly say so.
+   - Then restart from the last correct point; do not guess or hand‑wave.
+
+5. Keep the reasoning focused and minimal while still being rigorous.
+   - Avoid unnecessary numerical approximations if an exact approach is available.
+   - Do not approximate exact values unless the problem explicitly asks for a decimal.
+   - Prefer algebraic or structural arguments over trial‑and‑error or random guessing.
+   - You may test candidate values only after deriving strong constraints that sharply limit the possibilities.
+
+6. At the end, clearly isolate the answer:
+   - Provide the final answer as a single number or expression on its own line.
+   - Do not include any extra words, symbols, or explanation on that final line.
+Iteration 18: New subsample score 3.0 is better than old score 2.0. Continue to full eval and add to candidate pool.
+Iteration 18: Found a better program on the valset with score 0.5777777777777777.
+Iteration 18: Valset score for new program: 0.5777777777777777 (coverage 45 / 45)
+Iteration 18: Val aggregate for new program: 0.5777777777777777
+Iteration 18: Individual valset scores for new program: {1: 1.0, 11: 1.0, 16: 1.0, 0: 0.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 1.0, 12: 0.0, 13: 0.0, 14: 1.0, 15: 1.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 0.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 18: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 18: Valset pareto front aggregate score: 0.8222222222222222
+Iteration 18: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6}, 1: {0, 2, 6}, 2: {0, 1, 2, 3, 4, 5, 6}, 3: {0, 2, 3, 4, 5, 6}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0, 2, 4, 5, 6}, 6: {0, 1, 2, 3, 4, 6}, 7: {0, 1, 2, 3, 4, 5, 6}, 8: {0, 1, 2, 3, 4, 5, 6}, 9: {1}, 10: {6}, 11: {2, 6}, 12: {1}, 13: {1, 5}, 14: {0, 1, 2, 3, 4, 6}, 15: {0, 1, 2, 4, 5, 6}, 16: {6}, 17: {0, 2, 3, 5}, 18: {1, 2, 3, 4, 6}, 19: {0, 1, 2, 3, 4, 6}, 20: {0, 1, 2, 3, 4, 5, 6}, 21: {0, 3, 4, 5, 6}, 22: {1, 2, 3, 4, 5}, 23: {0, 1, 2, 3, 4, 5, 6}, 24: {0, 1, 2, 3, 4, 5, 6}, 25: {1, 3, 4}, 26: {0, 1, 2, 3, 4, 5, 6}, 27: {0, 1, 5, 6}, 28: {4}, 29: {0, 1, 2, 3, 4, 5, 6}, 30: {0, 1, 2, 3, 4, 5, 6}, 31: {0, 1, 3, 4}, 32: {0}, 33: {1, 2, 3, 6}, 34: {1, 2, 5, 6}, 35: {0, 1, 2, 3, 4, 5, 6}, 36: {2, 4}, 37: {0, 1, 2, 3, 4, 5, 6}, 38: {4, 6}, 39: {0, 1, 2, 3, 4, 5, 6}, 40: {3}, 41: {0, 2, 6}, 42: {0, 1, 2, 3, 4, 5, 6}, 43: {5, 6}, 44: {0, 1, 2, 3, 4, 5, 6}}
+Iteration 18: Best valset aggregate score so far: 0.5777777777777777
+Iteration 18: Best program as per aggregate score on valset: 6
+Iteration 18: Best score on valset: 0.5777777777777777
+Iteration 18: Linear pareto front program index: 6
+Iteration 18: New program candidate index: 6
+Iteration 19: Selected program 4 score: 0.4888888888888889
+Iteration 19: Proposed new text for prompt: Solve the math problem carefully. Show clear, correct reasoning that directly targets the requested final result, and avoid speculative or hand-wavy arguments. Explicitly check or justify any key algebraic steps or case splits. If you realize a line of reasoning leads to a contradiction or dead end, clearly identify it as such and restart from a correct earlier point instead of guessing.
+
+Use these structural guidelines:
+- Restate the problem briefly in your own words.
+- Set up notation and equations cleanly before manipulating them.
+- State all constraints on variables (e.g., integrality, ranges, positivity) before using them.
+- When solving equations or counting cases, explain each transformation or case split and why it is valid.
+- If you invoke a known theorem or standard fact (e.g., Vieta’s formulas, AM-GM, Pythagorean theorem, power of a point), name it and show how it applies in this specific context (not just by name alone).
+
+At the end, provide the final answer as a single number or expression on its own line, with no extra text, commentary, or formatting. Do not round or approximate exact values unless the problem explicitly asks for a decimal approximation.
+Iteration 19: New subsample score 1.0 is not better than old score 3.0, skipping
+Iteration 20: Selected program 6 score: 0.5777777777777777
+Iteration 20: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+   - Identify exactly what is being asked (e.g., a value, a count, a minimum/maximum, a proof).
+
+2. Set up notation and constraints before heavy manipulation.
+   - Define variables explicitly and consistently.
+   - State integrality and domain constraints (e.g., “n is a positive integer,” “x is real”).
+   - When introducing functions or polynomials, write them clearly and note any given structure (monic, degree, etc.).
+
+3. Make the key structural move early.
+   - Look for algebraic structure (factoring, Vieta, modular conditions, symmetry, standard forms).
+   - For polynomial-equality conditions, explicitly form and factor the difference (e.g., define q(x) = p(x) − p(2) and analyze its roots).
+   - For ratio or percentage problems, set up equations before guessing values; use divisibility and modular arithmetic where natural.
+
+4. Show clear, logically ordered reasoning.
+   - Justify nontrivial steps (e.g., “since coefficients are integers, rational‑root theorem implies…”, “by Vieta’s formulas…”, “because gcd(a,b)=1, we conclude…”).
+   - When splitting into cases:
+     - Explicitly state what distinguishes each case.
+     - Ensure cases are mutually exclusive and collectively exhaustive, or explain coverage.
+   - If counting objects, be explicit about whether overlaps between subcases are possible and how they are handled.
+
+5. Use number‑theoretic tools carefully when relevant.
+   - When gcds or divisibility appear, consider prime factorization and Euler’s totient function, but:
+     - Explicitly check that objects being counted really correspond 1–1 to the terms in any divisor/totient sum.
+     - Be cautious about assuming that expressions like N / gcd(N, M) are all distinct; check for possible collisions via structure, not by assertion.
+   - For congruence conditions, clearly derive modular equations and solve them step by step, especially when seeking minima.
+
+6. Handle dead ends and corrections explicitly.
+   - If an approach leads to contradiction or an impossibility (e.g., negative crowd size, noninteger where integer is required), mark it clearly as a dead end.
+   - Then return to the last correct structural insight and adjust the setup; do not simply assert a new path without indicating what changed.
+
+7. Control algebra and integrality carefully.
+   - Track when variables must be integers, rationals, or reals, and enforce these when solving equations and inequalities.
+   - When a parameterization introduces a free integer k (or similar), explicitly:
+     - Determine the full allowed integer range of k from all coefficient/variable bounds.
+     - Check that each such k truly yields valid objects, and that distinct k give distinct objects, unless you prove otherwise.
+   - Avoid circular definitions (e.g., expressing p(2) in terms of c and then c in terms of p(2)) without extracting concrete constraints.
+
+8. Prefer exact, structural arguments over ad hoc trial.
+   - Use discriminants, Vieta’s formulas, factorization, gcd properties, modular arithmetic, and symmetry rather than brute forcing many values.
+   - When you must enumerate, clearly identify why the set is finite and small (e.g., bounding a parameter using inequalities before case checking).
+
+9. At the end, verify and isolate the final answer.
+   - Check that all constraints in the original problem are satisfied (e.g., uniqueness of a root, “at least one digit nonzero,” coefficient ranges).
+   - Make sure there is no overcounting or missing cases by revisiting the case splits briefly.
+   - Provide the final answer as a single number or expression on its own line, with no extra words, symbols, or commentary on that line.
+Iteration 20: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 21: Selected program 3 score: 0.4444444444444444
+Iteration 21: Proposed new text for prompt: Solve the math problem carefully. First, work out the solution step by step with clear, correct reasoning (you may include intermediate explanations or derivations). Verify your reasoning against all given conditions in the problem, and prefer structurally simple or symmetry-based arguments over heavy algebra when possible.
+
+After you are completely finished, output the final answer as a single number on its own line at the very end, with no additional text on that line. Do not round or approximate exact values.
+Iteration 21: New subsample score 0.0 is not better than old score 1.0, skipping
+Iteration 22: Selected program 6 score: 0.5777777777777777
+Iteration 22: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define all variables explicitly.
+   - State all constraints (e.g., integrality, ranges, geometric conditions) before using them.
+   - Introduce coordinate systems, similar triangles, or vectors only when they simplify the structure.
+
+3. Show clear, logically ordered reasoning.
+   - Justify each important algebraic or geometric step.
+   - When you split into cases, state why each case is necessary and what assumptions define it.
+   - If you invoke a known theorem (e.g., Power of a Point, Pythagorean theorem, similarity, Vieta, Euler’s formula), name it and show exactly how it applies here.
+   - Prefer structural arguments (symmetry, invariants, similarity, projective or vector methods) over blind algebraic expansion when possible.
+
+4. Maintain correctness and recognize dead ends early.
+   - If you derive a contradiction or realize an approach is becoming inconsistent, clearly label it as a dead end.
+   - Do not keep building on incorrect intermediate conclusions.
+   - When backtracking from a dead end, return to the last clearly valid step and choose a different method; do not guess.
+
+5. Keep the reasoning focused and as concise as possible while remaining rigorous.
+   - Avoid unnecessary coordinate proliferation: use the smallest helpful set of variables.
+   - Avoid long, unmotivated algebraic manipulations; if an expression becomes unwieldy, look for geometric or structural simplifications.
+   - Do not introduce square roots or irrational expressions unless they are unavoidable; when they appear, keep them symbolic and exact.
+   - Do not approximate exact values unless the problem explicitly asks for a decimal or numerical approximation.
+
+6. Use problem‑appropriate standard tools instead of ad hoc constructions.
+   - For circle–segment configurations: consider Power of a Point, tangent–radius right angles, equal tangents from a point, and chord/angle relations before coordinates.
+   - For polygons and areas: consider similar triangles, area ratios, or vector/complex methods before setting up full coordinate systems.
+   - For combinatorial or planar graph region counts: favor Euler’s formula and counting of vertices/edges/faces over ad hoc recursions, and clearly identify intersections as vertices where appropriate.
+
+7. Sanity‑check intermediate results.
+   - Compare derived lengths, areas, or counts with given data to see if they are numerically and dimensionally plausible.
+   - If an intermediate result conflicts with a condition in the problem (e.g., sign, magnitude, or integrality), treat that as a signal to re‑examine recent steps.
+
+8. At the end, clearly isolate the answer:
+   - Provide the final answer exactly in the form requested (single number, simplified expression, or specified format like \(m+n\)).
+   - Put the final numerical or algebraic result on its own line with no extra words, symbols, or commentary.
+Iteration 22: New subsample score 0.0 is not better than old score 0.0, skipping
+Iteration 23: Selected program 3 score: 0.4444444444444444
+Iteration 23: Proposed new text for prompt: Solve the math problem carefully. First, work out the solution step by step with clear, correct reasoning (you may include intermediate explanations or derivations). Double-check any nontrivial inferences (for example, uses of power of a point, similarity, coordinate setups, or algebraic manipulations) for logical and computational accuracy.
+
+After you are completely finished, output ONLY the final numerical answer, as a single number on its own line at the very end, with no additional text or symbols on that line. Do not round or approximate exact values.
+Iteration 23: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 24: Selected program 1 score: 0.4888888888888889
+Iteration 24: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step, but keep each step logically sharp and concise rather than verbose. Explicitly:
+
+1. **Set up and notation**
+   - Restate the problem in your own words and introduce clear notation for unknowns.
+   - Identify what is given, what is to be found, and any obvious constraints (e.g. variables are integers, digits 0–9, polygon is convex, etc.).
+
+2. **Use structure and standard tools, but verify conditions**
+   - When you apply a known theorem (e.g. Heron’s formula, stars and bars, similarity, angle chasing, extremal principles), explicitly check that its hypotheses are satisfied in this problem.
+   - If the problem involves optimization or extremal values, don’t just guess a “nice” configuration; prove that:
+     - your construction satisfies all constraints,
+     - it actually attains the proposed extremal value,
+     - no other configuration can do better (give a clear inequality or counting argument).
+
+3. **Casework and combinatorics**
+   - When counting, organize your work into **mutually exclusive, collectively exhaustive** cases.
+   - State clearly why your case split covers all possibilities and avoids double counting.
+   - If symmetry is used to reduce casework, explain precisely what symmetry is being used and how it reduces the count.
+
+4. **Forbidden patterns / structural constraints**
+   - For conditions like “no arithmetic progression” or “all rows/columns in a grid obey a color rule”, proceed systematically:
+     - Fix the already-determined elements/structures.
+     - Derive all constraints they impose on the remaining elements (equations, inequalities, or structural restrictions).
+     - Solve these conditions in integers or allowable values, and for each candidate solution, verify that it obeys all bounds and problem constraints before accepting it.
+
+5. **Optimization with inequalities**
+   - For problems involving sums, products, or geometric constraints, use appropriate inequalities (AM-GM, Cauchy, rearrangement, bounding arguments) when helpful.
+   - When you introduce an inequality bound, explicitly justify it and then show that your proposed configuration actually reaches that bound (or explain why the extremum occurs at a boundary or special value).
+
+6. **Algebra and arithmetic**
+   - Keep algebra streamlined: avoid unnecessary symbolic complexity, especially when a direct elementary argument exists.
+   - When a “nice” integer or rational answer is expected (e.g. contest problems), check for simplifications before committing to a messy radical or decimal.
+   - For numeric expressions like areas or lengths, carry exact forms as long as is reasonable; only approximate if the problem explicitly calls for it.
+
+7. **Geometric reasoning**
+   - Draw or conceptually refer to a clear diagram with labeled points, segments, angles, and key equalities.
+   - Use vector, coordinate, or similarity methods only when they simplify the problem; avoid overcomplicating geometry with heavy algebra if a simple synthetic argument exists.
+   - For polygons with given constraints (e.g. equilateral, opposite sides parallel), translate these constraints into concrete relationships (parallelism ⇒ equal/related angles; equal sides ⇒ isosceles/regular structure; similarity ⇒ proportional segments) and exploit them directly.
+
+8. **Maximality / minimality / “no more can be added” conditions**
+   - For problems where a configuration is “maximal” or “cannot be extended” (e.g. no more chips can be added, no extra points can be placed):
+     - Interpret precisely what operations are forbidden.
+     - Show: for **every** way you might try to add an extra object (chip, point, segment), at least one condition is violated.
+     - Pay special attention to “empty” or “boundary” rows/columns/regions; often maximality forces these to satisfy extra constraints.
+
+9. **Final verification and answer format**
+   - At the end, quickly re-check:
+     - that all given conditions are used,
+     - that your solution works in edge cases (e.g. smallest/largest allowed values, potential degeneracies),
+     - that you did not implicitly assume something false (like uniqueness, convexity, integrality) without justification.
+   - Compute the final numerical value carefully. If the problem asks for a single numeric answer, present it on its own line as a plain number, with no extra text:
+     - e.g.
+       80
+   - If multiple values are required, list them in a clearly labeled, minimal format (e.g. “The possible values are 3 and 7.”).
+
+Aim for reasoning that is **complete but not bloated**: include all logically necessary steps and justification of key claims, but avoid digressions or speculative approaches once a clean path is available.
+Iteration 24: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 25: Selected program 6 score: 0.5777777777777777
+Iteration 25: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.  
+   - Identify exactly what is being asked (e.g., a value, a count, a proof).  
+   - Note any conditions like “integer,” “nonnegative,” “distinct,” or “in lowest terms.”
+
+2. Set up notation and equations cleanly before manipulating them.  
+   - Define all variables explicitly, including any symmetric sums or substitutions you introduce (e.g., \(S_1=a+b+c\), \(S_2=ab+bc+ca\)).  
+   - State domain constraints (e.g., \(a,b,c\in\mathbb{Z}_{\ge0}\), \(x>0\)).  
+   - When introducing transformations (e.g., \(x = 2\sin^2\theta\)), explain why they are valid and what range the new variables lie in.
+
+3. Use structure and known identities to simplify before casework.  
+   - For symmetric expressions, rewrite in terms of standard symmetric sums, or factor using identities (e.g., Vieta, \((a+b+c)^2\), \((a-b)^2\), sum/difference of cubes).  
+   - For radical expressions that suggest trigonometric or geometric substitutions, make the substitution explicit and then convert the entire system consistently before solving.  
+   - When dealing with rational numbers in lowest terms, factor and use gcd arguments systematically rather than ad hoc manipulation.
+
+4. Show clear, logically ordered reasoning with justified steps.  
+   - When you compute or compare expressions, show the key algebraic steps, not just the result.  
+   - If you apply a theorem (e.g., Vieta’s formulas, the identity for \(a^3+b^3+c^3-3abc\), or a trigonometric addition formula), name it and indicate the relevant formulas explicitly before substituting.  
+   - When deriving constraints (e.g., \(d\mid 55\), \(S_2\ge 0\)), explain why divisibility or inequality holds.
+
+5. Handle factorization and root-finding rigorously, avoiding missed branches.  
+   - When you obtain a factorized condition like \((a-100)(b-100)(c-100)=0\), enumerate all combinatorial cases implied (e.g., exactly one factor zero; exactly two; all three), and filter them using the original constraints.  
+   - For polynomials with integer roots, use Vieta’s relations and gcd/divisibility arguments to restrict possible roots before testing them.  
+   - When you derive a cubic (via Vieta) whose roots must be integers or reals in a specific range, show how each candidate root leads to a quadratic for the remaining roots and check those thoroughly, including sign and integrality constraints.
+
+6. Be disciplined with case analysis and counting.  
+   - When you split into cases, state clearly:
+     - what defines each case,
+     - why the cases are exhaustive and mutually exclusive.  
+   - In counting problems, distinguish between unordered multisets and ordered tuples; multiply by the appropriate permutation count only after confirming all entries are distinct or identifying repetitions.  
+   - Explicitly verify that every solution counted satisfies all original conditions and that there are no duplicates across cases.
+
+7. Avoid dead ends and fix them explicitly if they occur.  
+   - If you realize a step was incorrect or led to a contradiction, say so clearly, roll back to the last correct equation or inequality, and restart from there.  
+   - Do not keep or build on any line of reasoning once you have recognized it is invalid.
+
+8. Maintain exactness whenever feasible.  
+   - Prefer symbolic manipulation (factoring, identities, exact fractions, radicals) over decimal approximations unless the problem explicitly requests a numerical approximation.  
+   - For trigonometric values at special angles, use exact forms (e.g., \(\cos 15^\circ = \tfrac{\sqrt{6}+\sqrt{2}}{4}\)), and simplify products like \((\sqrt{6}+\sqrt{2})(\sqrt{6}-\sqrt{2})\) exactly.  
+   - For rational sums, reduce to lowest terms before extracting the final \(p+q\) or similar expression.
+
+9. Present the final computation or expression cleanly and check consistency.  
+   - If the problem asks for a derived quantity (like \([(1-x)(1-y)(1-z)]^2\) or the sum of all valid \(r\)), compute that quantity explicitly from your solved variables and simplify fully.  
+   - Confirm that all conditions from the original problem (domains, “in lowest terms,” “distinct,” etc.) remain satisfied by your final solutions.  
+   - If multiple solutions exist, explain how you aggregate them (sum, count, product) to obtain the requested final result.
+
+10. At the end, clearly isolate the final answer:  
+    - Put the final requested value (single number or closed-form expression) on its own line.  
+    - Do not append words or symbols (no “Answer = ”, no extra punctuation).
+Iteration 25: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 26: Selected program 4 score: 0.4888888888888889
+Iteration 26: Proposed new text for prompt: Solve the math problem carefully. Show clear, correct reasoning that directly targets the requested final result, and avoid speculative or hand-wavy arguments. Explicitly check or justify any key algebraic steps or case splits. If you realize a line of reasoning leads to a contradiction or dead end, clearly identify it as such and restart from a correct earlier point instead of guessing.
+
+Use these structural guidelines:
+- Briefly restate the problem in your own words, including what is being asked for.
+- Cleanly set up notation, variables, and equations before manipulating them.
+- State all relevant constraints (e.g., integrality, ranges, distinctness) before using them.
+- When invoking a known theorem or standard result (e.g., Ptolemy, Vieta, Erdős–Ko–Rado, inclusion–exclusion, power of a point), name it and indicate precisely how it applies in this situation.
+- In geometry or combinatorics problems, explicitly justify any symmetry assumptions, maximality/minimality claims, or “without loss of generality” reductions.
+
+Reasoning requirements:
+- Avoid skipping nontrivial algebra or casework steps; show enough intermediate work that each transformation is checkable.
+- In multi-case arguments, clearly enumerate the cases, explain why they cover all possibilities, and check that no case violates the original conditions.
+- If you derive an equation or system, check it against small sanity checks (e.g., boundary values, counting totals) when feasible.
+
+Error handling:
+- If you detect that an intermediate conclusion conflicts with given data or constraints, mark that branch as a dead end, revert to the last correct point, and redo the argument rather than patching it heuristically.
+- Be cautious with “known” classifications or extremal results (e.g., maximum size of intersecting families); if you use one, either briefly justify why it applies here or cross-check it against the problem’s numerical data.
+
+Final answer formatting:
+- At the end, provide the final answer as a single number or expression on its own line, with no extra text.
+- Do not round or approximate exact values unless the problem explicitly asks for a decimal approximation.
+Iteration 26: New subsample score 1.0 is not better than old score 1.0, skipping
+Iteration 27: Selected program 6 score: 0.5777777777777777
+Iteration 27: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+   - Identify what is given and what must be found.
+   - Note any special conditions (e.g., ordering of variables, geometric configuration).
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define all variables explicitly (including any you introduce, like substitutions).
+   - State all constraints and domain conditions (positivity, integrality, ordering, angle ranges, etc.) before using them.
+   - When you make structural assumptions (e.g., “assume all first k terms are equal”), clearly justify why this does not reduce generality for maximizing/minimizing the desired expression.
+
+3. Plan the approach before detailed algebra.
+   - Briefly outline the main idea (e.g., symmetry, extremal principle, splitting into cases, using inequalities, introducing coordinates).
+   - For optimization / extremal problems, explain why your configuration is optimal (e.g., by convexity, rearrangement inequality, averaging arguments), not just by constructing one example.
+   - For existence/uniqueness, mention how you will show all solutions or the unique solution.
+
+4. Show clear, logically ordered reasoning.
+   - Justify each important algebraic, geometric, or inequality step.
+   - When you split into cases, state:
+     * why each case must be considered, and
+     * what assumptions define the case.
+   - If you invoke a known theorem or fact (e.g., Ptolemy, Power of a Point, Cauchy–Schwarz, AM–GM, similarity, Vieta, extremal principle), name it and show explicitly how it applies in this context.
+   - For inequality / optimization problems, be explicit about:
+     * where equalities can occur,
+     * why boundary or extreme configurations are considered,
+     * and why they indeed give a global optimum under the constraints.
+
+5. Handle dead ends correctly.
+   - If a line of reasoning leads to a contradiction or dead end, explicitly say so.
+   - Roll back to the last correct point and choose a new approach; do not keep using a flawed assumption.
+   - Do not discard potential solutions without checking them against all given conditions.
+
+6. Keep the reasoning focused but rigorous.
+   - Avoid unnecessary numerical approximations when an exact expression is available.
+   - Do not approximate exact values unless the problem explicitly asks for a decimal or numerical estimate.
+   - Prefer structural or conceptual arguments (symmetry, convexity, parity, monotonicity, invariants, etc.) over ad hoc trial‑and‑error or guess‑and‑check.
+   - You may test specific candidate values only after deriving strong constraints that sharply limit the possibilities, and you must explain why those candidates are exhaustive.
+
+7. Treat ordering and extremal indices with care.
+   - For sequences with ordering constraints (e.g., \(x_1 \le \dots \le x_n\)), reason about which indices must be negative, zero, or positive to maximize or minimize a given difference.
+   - When you set many consecutive terms equal (e.g., all smallest terms equal to some \(b\), all largest terms equal to some \(a\), and middle ones zero), justify that any deviation from this would decrease (or not increase) the desired quantity, using monotonicity or averaging arguments.
+   - Ensure that sign and ordering constraints are respected in all constructed examples.
+
+8. Final consistency check.
+   - At the end, verify that your solution satisfies:
+     * all original equations/constraints,
+     * ordering or geometric conditions,
+     * and any side conditions (e.g., angle ranges, positivity, distinctness).
+   - For maximization/minimization problems, explicitly argue that:
+     * your value is attainable by some configuration, and
+     * no configuration can exceed (or go below) it.
+
+9. At the end, clearly isolate the answer:
+   - Provide the final answer as a single number or expression on its own line.
+   - Do not include any extra words, symbols, or explanation on that final line.
+Iteration 27: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 27: Valset score for new program: 0.4888888888888889 (coverage 45 / 45)
+Iteration 27: Val aggregate for new program: 0.4888888888888889
+Iteration 27: Individual valset scores for new program: {6: 0.0, 18: 1.0, 19: 1.0, 0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 7: 1.0, 8: 0.0, 9: 0.0, 10: 0.0, 11: 0.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 0.0, 16: 0.0, 17: 0.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 0.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 1.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 0.0, 41: 0.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 27: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 27: Valset pareto front aggregate score: 0.8666666666666667
+Iteration 27: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7}, 1: {0, 2, 6, 7}, 2: {0, 1, 2, 3, 4, 5, 6, 7}, 3: {0, 2, 3, 4, 5, 6, 7}, 4: {0, 1, 2, 3, 4, 5, 6, 7}, 5: {0, 2, 4, 5, 6, 7}, 6: {0, 1, 2, 3, 4, 6}, 7: {0, 1, 2, 3, 4, 5, 6, 7}, 8: {0, 1, 2, 3, 4, 5, 6}, 9: {1}, 10: {6}, 11: {2, 6}, 12: {1, 7}, 13: {1, 5, 7}, 14: {0, 1, 2, 3, 4, 6, 7}, 15: {0, 1, 2, 4, 5, 6}, 16: {6}, 17: {0, 2, 3, 5}, 18: {1, 2, 3, 4, 6, 7}, 19: {0, 1, 2, 3, 4, 6, 7}, 20: {0, 1, 2, 3, 4, 5, 6, 7}, 21: {0, 3, 4, 5, 6, 7}, 22: {1, 2, 3, 4, 5, 7}, 23: {7}, 24: {0, 1, 2, 3, 4, 5, 6, 7}, 25: {1, 3, 4}, 26: {0, 1, 2, 3, 4, 5, 6, 7}, 27: {0, 1, 5, 6, 7}, 28: {4}, 29: {0, 1, 2, 3, 4, 5, 6, 7}, 30: {7}, 31: {0, 1, 3, 4}, 32: {0}, 33: {1, 2, 3, 6, 7}, 34: {1, 2, 5, 6}, 35: {0, 1, 2, 3, 4, 5, 6, 7}, 36: {2, 4}, 37: {0, 1, 2, 3, 4, 5, 6, 7}, 38: {4, 6, 7}, 39: {0, 1, 2, 3, 4, 5, 6, 7}, 40: {3}, 41: {0, 2, 6}, 42: {0, 1, 2, 3, 4, 5, 6, 7}, 43: {5, 6}, 44: {0, 1, 2, 3, 4, 5, 6, 7}}
+Iteration 27: Best valset aggregate score so far: 0.5777777777777777
+Iteration 27: Best program as per aggregate score on valset: 6
+Iteration 27: Best score on valset: 0.5777777777777777
+Iteration 27: Linear pareto front program index: 6
+Iteration 27: New program candidate index: 7
+Iteration 28: Selected program 3 score: 0.4444444444444444
+Iteration 28: Proposed new text for prompt: Solve the math problem carefully. First, work out the solution step by step with clear, correct reasoning (you may include intermediate explanations or derivations). After you are completely finished, output the final answer *exactly as required by the problem statement*. In particular, if the problem asks for a single numeric value, then end your response with that value on its own line with no additional text on that line. Do not round or approximate exact values unless the problem explicitly instructs you to do so.
+Iteration 28: New subsample score 3.0 is not better than old score 3.0, skipping
+Iteration 29: Selected program 6 score: 0.5777777777777777
+Iteration 29: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define variables explicitly.
+   - State all constraints (e.g., integrality, ranges, geometric conditions) before using them.
+
+3. Show clear, logically ordered reasoning.
+   - Justify each important algebraic or geometric step.
+   - When you split into cases, state why each case is necessary and what assumptions define it.
+   - If you invoke a known theorem (e.g., Ptolemy, Power of a Point, similarity, Vieta), name it and show exactly how it applies in this context.
+
+4. Use bounding and structural observations when expressions are large or unwieldy.
+   - Prefer inequalities, symmetry, parity, modular arithmetic, or averaging arguments to control huge sums or products.
+   - Reduce to simpler “core” expressions (like replacing a floor sum by an exact polynomial plus a bounded error term) before plugging large numbers.
+
+5. Track error terms and “approximate” steps rigorously.
+   - When you approximate a quantity, immediately bound the resulting error and show it cannot affect the discrete choices (e.g., the unique integer parameter).
+   - Never deduce exact integer values from unchecked decimal approximations; always bring the argument back to exact arithmetic before concluding.
+
+6. Handle dead ends correctly.
+   - If you realize a line of reasoning leads to a contradiction or dead end, explicitly say so.
+   - Then restart from the last correct point; do not guess or hand‑wave.
+
+7. Keep the reasoning focused and minimal while still being rigorous.
+   - Avoid unnecessary numerical expansions of huge integers when a factored or symbolic form suffices.
+   - Do not approximate exact values unless the problem explicitly asks for a decimal.
+   - Prefer algebraic or structural arguments over trial‑and‑error or random guessing.
+   - You may test candidate values only after deriving strong constraints that sharply limit the possibilities.
+
+8. At the end, clearly isolate the answer:
+   - Provide the final answer as a single number or expression on its own line.
+   - Do not include any extra words, symbols, or explanation on that final line.
+Iteration 29: New subsample score 2.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 29: Valset score for new program: 0.5555555555555556 (coverage 45 / 45)
+Iteration 29: Val aggregate for new program: 0.5555555555555556
+Iteration 29: Individual valset scores for new program: {5: 0.0, 28: 1.0, 40: 1.0, 0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 1.0, 11: 0.0, 12: 0.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 0.0, 17: 0.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 0.0, 23: 0.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 0.0, 29: 0.0, 30: 0.0, 31: 1.0, 32: 0.0, 33: 1.0, 34: 0.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 1.0, 39: 0.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 29: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 29: Valset pareto front aggregate score: 0.8666666666666667
+Iteration 29: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 1: {0, 2, 6, 7, 8}, 2: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 3: {0, 2, 3, 4, 5, 6, 7, 8}, 4: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 5: {0, 2, 4, 5, 6, 7}, 6: {0, 1, 2, 3, 4, 6, 8}, 7: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 8: {0, 1, 2, 3, 4, 5, 6, 8}, 9: {1}, 10: {8, 6}, 11: {2, 6}, 12: {1, 7}, 13: {8, 1, 5, 7}, 14: {0, 1, 2, 3, 4, 6, 7, 8}, 15: {0, 1, 2, 4, 5, 6, 8}, 16: {6}, 17: {0, 2, 3, 5}, 18: {1, 2, 3, 4, 6, 7, 8}, 19: {0, 1, 2, 3, 4, 6, 7, 8}, 20: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 21: {0, 3, 4, 5, 6, 7, 8}, 22: {1, 2, 3, 4, 5, 7}, 23: {7}, 24: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 25: {8, 1, 3, 4}, 26: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 27: {0, 1, 5, 6, 7}, 28: {8, 4}, 29: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 30: {7}, 31: {0, 1, 3, 4, 8}, 32: {0}, 33: {1, 2, 3, 6, 7, 8}, 34: {1, 2, 5, 6}, 35: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 36: {2, 4}, 37: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 38: {8, 4, 6, 7}, 39: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 40: {8, 3}, 41: {0, 8, 2, 6}, 42: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 43: {5, 6}, 44: {0, 1, 2, 3, 4, 5, 6, 7, 8}}
+Iteration 29: Best valset aggregate score so far: 0.5777777777777777
+Iteration 29: Best program as per aggregate score on valset: 6
+Iteration 29: Best score on valset: 0.5777777777777777
+Iteration 29: Linear pareto front program index: 6
+Iteration 29: New program candidate index: 8
+Iteration 30: Selected program 7 score: 0.4888888888888889
+Iteration 30: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+   - Identify what is given and what must be found.
+   - Note any special conditions (e.g., ordering of variables, geometric configuration).
+   - Keep this restatement to 2–4 sentences; avoid unnecessary rephrasing.
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define all variables explicitly (including any you introduce, like substitutions or parameters).
+   - State all constraints and domain conditions (positivity, integrality, ordering, angle ranges, etc.) before using them.
+   - When you make structural assumptions (e.g., “assume all first k terms are equal”), clearly justify why this does not reduce generality for maximizing/minimizing the desired expression.
+
+3. Plan the approach in 2–3 sentences before detailed algebra.
+   - Outline the main idea (e.g., parity/geometry/combinatorics casework, symmetry, extremal principle, standard inequalities).
+   - Indicate briefly why this method is appropriate (e.g., “faces share the same diagonal data, so work in terms of edge lengths and cosines,” or “condition is parity-based, so separate into odd/even positions”).
+   - For optimization / extremal problems, mention how you will certify optimality (e.g., via convexity, rearrangement, or a bounding inequality).
+
+4. Show clear, logically ordered reasoning with minimal but sufficient detail.
+   - Justify each important algebraic, geometric, or inequality step; you may skip only routine algebraic simplifications.
+   - When you split into cases, explicitly state:
+     * why each case must be considered, and
+     * what assumptions define the case.
+   - If you invoke a known theorem or fact (e.g., Power of a Point, Cauchy–Schwarz, AM–GM, cyclic quadrilateral criterion, volume formula via scalar triple product), name it and indicate precisely how it is used here.
+
+5. Use structure to avoid brute‑force overcounting or messy casework when possible.
+   - For combinatorics, prefer symmetry, complementary counting, or inclusion–exclusion with a *correct, explicitly tracked* event structure.
+   - When using inclusion–exclusion:
+     * Clearly define each event,
+     * Classify intersections by type,
+     * Check that higher‑order intersections are actually nonempty (avoid assuming they are zero without justification),
+     * Guard against double counting by verifying that all distinct types are enumerated once.
+   - For geometry with regular polygons, use structural facts (e.g., classification of rectangles via diameters/opposite vertices) and then reduce to simpler counting on independent “groups” or orbits when possible.
+
+6. Handle dead ends and corrections explicitly but concisely.
+   - If a line of reasoning leads to a contradiction or clear overcomplication, say so briefly, stop using it, and revert to the last sound point.
+   - Do not base further steps on an argument you have already found to be flawed.
+   - If you adjust a counting or inclusion–exclusion argument, clearly state what was miscounted and how the corrected counting fixes that issue.
+
+7. Treat ordering, sign, and extremal configurations with care.
+   - For sequences with ordering constraints (e.g., \(x_1 \le \dots \le x_n\)), reason about which indices must be negative, zero, or positive to optimize an expression, and justify any “clumping” of equal values by averaging or monotonicity arguments.
+   - When you assert that an extremal configuration forces certain variables to take only a small set of values, argue why any deviation decreases (or does not increase) the objective.
+   - For vector/angle configurations (e.g., parallelepipeds), keep dot products and cosines consistent across all faces; check that all face conditions (like given diagonals) are simultaneously satisfied.
+
+8. Keep the reasoning focused, with exact values preferred over approximations.
+   - Avoid unnecessary numerical approximations when an exact expression is available.
+   - Simplify radicals and rational expressions fully when they appear in the final result.
+   - For probability or counting problems:
+     * Clearly separate “total configurations” from “favorable configurations.”
+     * Reduce final fractions to lowest terms and check coprimality where required.
+
+9. Perform a final consistency and extremality check.
+   - Verify that your proposed solution(s) satisfy all original equations, inequalities, geometric conditions, and integrality/positivity constraints.
+   - For maximization/minimization or “largest/smallest” questions:
+     * Argue that your extremal value is attainable by an explicit configuration,
+     * Show that no other configuration can exceed (or go below) it using your chosen method (e.g., inequality, convexity, or structural argument).
+
+10. Clearly isolate the final answer.
+   - Present the final requested value (number or expression) on its own line, with no extra commentary on that line.
+   - If the problem asks for a derived quantity (like \(m+n\)), ensure you explicitly identify \(m\) and \(n\) first and then compute the requested combination.
+Iteration 30: New subsample score 2.0 is not better than old score 2.0, skipping
+Iteration 31: Selected program 8 score: 0.5555555555555556
+Iteration 31: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+   - Identify what is given and what must be found.
+   - Note any obvious symmetries or key structural features (e.g., “expression is symmetric in a,b,c”).
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define all variables explicitly (including any auxiliary variables like symmetric sums).
+   - State all constraints (e.g., variable ranges, integrality, geometric conditions) before using them.
+   - When you introduce a substitution or change of variables, state it clearly and keep track of it.
+
+3. Use identities and structure early to simplify.
+   - For symmetric expressions, introduce sums/products like \(s_1 = a+b+c\), \(s_2 = ab+bc+ca\), \(s_3 = abc\) and apply standard identities (e.g., Newton sums, \((a+b+c)^2\), \((a+b+c)^3\)).
+   - For geometric problems, set up key distances, angles, or similar triangles explicitly before computing.
+   - Prefer factored or symbolic forms over fully expanded large integers whenever possible.
+
+4. Show clear, logically ordered reasoning.
+   - Justify each important algebraic or geometric step (e.g., “by AM-GM”, “by Cauchy-Schwarz”, “using Vieta’s formulas”).
+   - When splitting into cases, explicitly state:
+     * what condition defines each case,
+     * why the case split is exhaustive and non-overlapping,
+     * and how each case is handled to completion.
+   - If you invoke a known theorem (Ptolemy, Power of a Point, similarity, Vieta, etc.), name it and write the specific equations you get from it in this problem.
+
+5. Use inequalities and bounding strategically instead of brute-force computation.
+   - Control large expressions with:
+     * symmetry,
+     * parity,
+     * modular arithmetic,
+     * AM-GM / Cauchy-Schwarz / rearrangement,
+     * or “sum and product” bounds (e.g., fixing sum to bound product).
+   - When optimizing (max/min) under constraints, first reduce to a smaller-dimensional or more symmetric configuration when justified (e.g., show that at optimum two variables must be equal via symmetry or Lagrange multipliers).
+   - Avoid unnecessary expansion of huge numbers if a factored or parametric description suffices.
+
+6. Handle approximations and integer conclusions rigorously.
+   - You may use decimal approximations to gain intuition, but:
+     * never base a final exact conclusion solely on a decimal approximation,
+     * always convert back to exact algebra (fractions, radicals) before concluding exact integer values.
+   - If you approximate a quantity in the middle of a proof, immediately bound the error and explain why it cannot change which integer or discrete choice is correct.
+
+7. Treat potential dead ends correctly.
+   - If a line of reasoning leads to a contradiction or becomes unwieldy, state explicitly that it is a dead end.
+   - Roll back to the last clearly valid point and choose a different approach; do not silently discard conditions or make unjustified leaps.
+   - Avoid random trial-and-error of many values unless you have already derived strong constraints that reduce the search to a very small finite set.
+
+8. Be as concise as is compatible with rigor.
+   - Prefer conceptual arguments (e.g., symmetry, invariants, clever substitutions) over long routine algebra when both are available.
+   - Suppress routine arithmetic details unless they are subtle or error-prone; just show the key steps.
+   - Do not re-derive standard identities (like \((a+b+c)^2\)) unless there is a nonstandard twist; simply cite and apply them.
+
+9. Isolate and verify the final answer clearly.
+   - After completing the reasoning, restate the quantity being asked for and substitute your derived values explicitly to compute it.
+   - If the answer is supposed to be an integer derived from a fraction (like \(p+q\) where \(\frac{p}{q}\) is simplified), explicitly check:
+     * that the fraction is in lowest terms,
+     * and then compute the requested combination.
+   - End with the final answer on its own line, with no extra words, symbols, or explanation attached:
+     * e.g., for AIME-style problems: `721`
+     * e.g., for “find \(m+n\)”: write just the integer \(m+n\).
+Iteration 31: New subsample score 2.0 is not better than old score 3.0, skipping
+Iteration 32: Selected program 1 score: 0.4888888888888889
+Iteration 32: Proposed new text for prompt: Solve the math problem carefully and completely. Show your reasoning step by step, but keep it as clean and streamlined as possible: avoid unnecessary detours or speculative approaches.
+
+Core requirements for all problems:
+- Make your overall plan clear early on (what you’re going to compute or prove, and how).
+- Justify each nontrivial step (algebraic, combinatorial, or geometric), but don’t repeat equivalent arguments multiple times once a pattern is established.
+- Explicitly state and use any important number-theoretic facts, combinatorial formulas, or geometric relationships you rely on (e.g., totient function, inclusion–exclusion, similarity, gradient/tangency conditions), and check their preconditions.
+
+For **counting and probability problems**:
+- When using casework or inclusion–exclusion, ensure cases are:
+  - exhaustive (cover all possibilities), and
+  - mutually exclusive (no double-counting).
+- Clearly specify what each case represents and how you derive each count.
+- If symmetry or invariance is used to simplify counting, explain why it applies.
+
+For **number theory / modular / fraction-simplification problems**:
+- Factor relevant integers when it’s helpful (e.g., denominators like 9999) and explicitly use these factorizations in gcd, divisor, and totient arguments.
+- When reasoning about reduced fractions, keep the relationships between the original numerator/denominator and the reduced numerator/denominator precise; avoid unsupported restrictions on possible prime factors.
+- When invoking standard results (like Euler’s totient function or properties of repeating decimals), briefly verify that all hypotheses are satisfied in the current context.
+
+For **geometry problems**:
+- Set up a clear coordinate or geometric model (e.g., using parameters like radii, centers, and axes of symmetry).
+- Derive key equations carefully (e.g., from distance formulas, similarity, or known surface equations) and ensure tangency or extremal conditions are translated correctly into algebra.
+- After solving, interpret solutions geometrically (discarding extraneous roots if needed) and verify they lie in the valid ranges.
+
+For **optimization or “maximum/minimum” problems**:
+- State the objective and constraints clearly.
+- Use appropriate inequalities (AM–GM, Cauchy, etc.) or structural arguments, and verify equality conditions are actually attainable under the given constraints.
+- Check that your proposed extremal configuration satisfies all original conditions.
+
+Edge cases and completeness:
+- When a problem naturally splits into a small number of structural cases (e.g., based on parity, divisibility, or configuration type), handle each explicitly and justify that no additional cases exist.
+- Before concluding, quickly verify that the union of all treated cases exactly matches the problem’s conditions.
+
+Presentation:
+- Keep notation consistent and clearly defined.
+- Avoid overly long digressions; when a pattern or method is clear, summarize rather than re-deriving from scratch.
+- After finishing the reasoning, compute the final numerical result carefully and present the final answer on its own line, as a single number (or the required expression) with no extra commentary.
+Iteration 32: New subsample score 1.0 is not better than old score 2.0, skipping
+Iteration 33: Selected program 7 score: 0.4888888888888889
+Iteration 33: Proposed new text for prompt: Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+   - Identify what is given and what must be found.
+   - Note any special conditions (e.g., ordering of variables, geometric configuration).
+   - If probabilities or relative strengths are described, restate them explicitly as equations or inequalities.
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define all variables explicitly (including any you introduce, like substitutions or case indicators).
+   - State all constraints and domain conditions (positivity, integrality, ordering, angle ranges, etc.) before using them.
+   - When you make structural assumptions (e.g., “assume all first k terms are equal” or “assume a player is more/less likely to win against another”), clearly justify why this does not reduce generality for maximizing/minimizing the desired expression.
+   - Do **not** introduce “symmetry” or “equal likelihood” assumptions that are not stated or implied by the problem. In particular, **do not assume equal probabilities** (like 1/2) for unspecified matchups; instead:
+     * Check whether such probabilities can be deduced from given information.
+     * If they cannot, treat them as unknowns **only if** they cancel out or do not affect the final answer.
+     * Otherwise, reconsider the modeling so that every probabilistic quantity you use is actually given or derivable.
+
+3. Plan the approach before detailed algebra.
+   - Briefly outline the main idea (e.g., symmetry, extremal principle, splitting into cases, using inequalities, introducing coordinates).
+   - For combinatorial or probability problems:
+     * Enumerate cases based on structurally different arrangements (e.g., different bracketings of players, different sign patterns in sequences).
+     * Verify that all cases are mutually exclusive and cover all possibilities.
+   - For optimization / extremal problems, explain why your configuration is optimal (e.g., by convexity, rearrangement inequality, averaging arguments), not just by constructing one example.
+
+4. Show clear, logically ordered reasoning.
+   - Justify each important algebraic, geometric, combinatorial, or inequality step.
+   - When you split into cases, state:
+     * why each case must be considered, and
+     * what assumptions define the case.
+   - If you invoke a known theorem or fact (e.g., Ptolemy, Power of a Point, Cauchy–Schwarz, AM–GM, rearrangement, extremal principle), name it and show explicitly how it applies in this context.
+   - For probability:
+     * Clearly distinguish conditional probabilities, total probabilities, and independence assumptions.
+     * Use tree diagrams, case tables, or explicit conditioning when helpful.
+   - For inequality / optimization problems, be explicit about:
+     * where equalities can occur,
+     * why boundary or extreme configurations are considered,
+     * and why they indeed give a global optimum under the constraints.
+
+5. Handle dead ends correctly.
+   - If a line of reasoning leads to a contradiction, unjustified assumption, or dead end, explicitly say so.
+   - Roll back to the last correct point and choose a new approach; do not keep using a flawed assumption.
+   - Do not discard potential solutions without checking them against all given conditions.
+
+6. Keep the reasoning focused but rigorous.
+   - Avoid unnecessary numerical approximations when an exact expression is available.
+   - Do not approximate exact values unless the problem explicitly asks for a decimal or numerical estimate.
+   - Prefer structural or conceptual arguments (symmetry, convexity, parity, monotonicity, invariants, majorization, etc.) over ad hoc trial‑and‑error or guess‑and‑check.
+   - You may test specific candidate values only after deriving strong constraints that sharply limit the possibilities, and you must explain why those candidates are exhaustive.
+
+7. Treat ordering and extremal indices with care.
+   - For sequences with ordering constraints (e.g., \(x_1 \le \dots \le x_n\)):
+     * Reason explicitly about which indices must be negative, zero, or positive to maximize or minimize a given difference.
+     * When you set many consecutive terms equal (e.g., all smallest terms equal to some \(b\), all largest terms equal to some \(a\), and middle ones zero), **prove** that any deviation from this (while preserving the constraints) cannot increase the quantity of interest. Use averaging, majorization, or simple inequalities like
+       \[
+       \text{if } u \le v \le w \text{ and } u+ w \text{ fixed, then } v \text{ is maximized/minimized when } v = u \text{ or } v = w.
+       \]
+   - When dealing with “block-constant” configurations (e.g., several smallest equal, several middle equal, several largest equal), justify why an optimal configuration must have at most as many distinct values as there are active linear constraints (sum, absolute sum, etc.).
+
+8. Be especially cautious in problems where some quantities are not fully specified.
+   - Check whether the desired final answer is independent of those unspecified quantities.
+   - If the answer **does** depend on them, then:
+     * You must not assign arbitrary values to them.
+     * Instead, re-express the objective in a way that cancels or bounds those unknowns using only the given information.
+   - If you introduce an auxiliary parameter for an unspecified probability or value, clearly track it symbolically and show how it vanishes from the final expression (or explain why it must take a specific value from other constraints).
+
+9. Final consistency and optimality check.
+   - At the end, verify that your solution satisfies:
+     * all original equations/constraints,
+     * ordering or geometric conditions,
+     * and any side conditions (e.g., angle ranges, positivity, distinctness, integrality).
+   - For maximization/minimization problems, explicitly argue that:
+     * your value is attainable by some configuration you construct, and
+     * no configuration can exceed (or go below) it, using a clear inequality or extremal argument (not just numerical comparison).
+   - For probability problems, check that:
+     * all case probabilities sum to 1 (or to the correct conditional total),
+     * the final probability is between 0 and 1,
+     * and independence/conditioning assumptions match the problem statement.
+
+10. At the end, clearly isolate the answer:
+   - Provide the final answer as a single number or expression on its own line.
+   - Do not include any extra words, symbols, or explanation on that final line.
+Iteration 33: New subsample score 3.0 is better than old score 1.0. Continue to full eval and add to candidate pool.
+Iteration 33: Valset score for new program: 0.5555555555555556 (coverage 45 / 45)
+Iteration 33: Val aggregate for new program: 0.5555555555555556
+Iteration 33: Individual valset scores for new program: {6: 1.0, 16: 1.0, 24: 1.0, 0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 0.0, 7: 1.0, 8: 1.0, 9: 0.0, 10: 1.0, 11: 0.0, 12: 0.0, 13: 0.0, 14: 1.0, 15: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 0.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 0.0, 29: 0.0, 30: 0.0, 31: 0.0, 32: 0.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 0.0, 37: 1.0, 38: 0.0, 39: 0.0, 40: 0.0, 41: 1.0, 42: 0.0, 43: 0.0, 44: 0.0}
+Iteration 33: New valset pareto front scores: {0: 0.0, 1: 1.0, 2: 0.0, 3: 1.0, 4: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0, 9: 1.0, 10: 1.0, 11: 1.0, 12: 1.0, 13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0, 21: 1.0, 22: 1.0, 23: 1.0, 24: 1.0, 25: 1.0, 26: 1.0, 27: 1.0, 28: 1.0, 29: 0.0, 30: 1.0, 31: 1.0, 32: 1.0, 33: 1.0, 34: 1.0, 35: 1.0, 36: 1.0, 37: 1.0, 38: 1.0, 39: 0.0, 40: 1.0, 41: 1.0, 42: 0.0, 43: 1.0, 44: 0.0}
+Iteration 33: Valset pareto front aggregate score: 0.8666666666666667
+Iteration 33: Updated valset pareto front programs: {0: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 1: {0, 2, 6, 7, 8, 9}, 2: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 3: {0, 2, 3, 4, 5, 6, 7, 8, 9}, 4: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 5: {0, 2, 4, 5, 6, 7}, 6: {0, 1, 2, 3, 4, 6, 8, 9}, 7: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 8: {0, 1, 2, 3, 4, 5, 6, 8, 9}, 9: {1}, 10: {8, 9, 6}, 11: {2, 6}, 12: {1, 7}, 13: {8, 1, 5, 7}, 14: {0, 1, 2, 3, 4, 6, 7, 8, 9}, 15: {0, 1, 2, 4, 5, 6, 8, 9}, 16: {9, 6}, 17: {0, 2, 3, 5, 9}, 18: {1, 2, 3, 4, 6, 7, 8, 9}, 19: {0, 1, 2, 3, 4, 6, 7, 8, 9}, 20: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 21: {0, 3, 4, 5, 6, 7, 8, 9}, 22: {1, 2, 3, 4, 5, 7, 9}, 23: {7}, 24: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 25: {1, 3, 4, 8, 9}, 26: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 27: {0, 1, 5, 6, 7, 9}, 28: {8, 4}, 29: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 30: {7}, 31: {0, 1, 3, 4, 8}, 32: {0}, 33: {1, 2, 3, 6, 7, 8, 9}, 34: {1, 2, 5, 6, 9}, 35: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 36: {2, 4}, 37: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 38: {8, 4, 6, 7}, 39: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 40: {8, 3}, 41: {0, 2, 6, 8, 9}, 42: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 43: {5, 6}, 44: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}}
+Iteration 33: Best valset aggregate score so far: 0.5777777777777777
+Iteration 33: Best program as per aggregate score on valset: 6
+Iteration 33: Best score on valset: 0.5777777777777777
+Iteration 33: Linear pareto front program index: 6
+Iteration 33: New program candidate index: 9
+
+Evaluating Baseline (Initial Prompt)...
+  0%|          | 0/30 [00:00<?, ?it/s]Average Metric: 1.00 / 1 (100.0%):   0%|          | 0/30 [00:00<?, ?it/s]Average Metric: 2.00 / 2 (100.0%):   3%|▎         | 1/30 [00:00<00:00, 40.50it/s]Average Metric: 3.00 / 3 (100.0%):   7%|▋         | 2/30 [00:00<00:00, 80.18it/s]Average Metric: 4.00 / 4 (100.0%):  10%|█         | 3/30 [00:00<00:00, 91.42it/s]Average Metric: 5.00 / 5 (100.0%):  13%|█▎        | 4/30 [00:00<00:00, 120.91it/s]Average Metric: 6.00 / 6 (100.0%):  17%|█▋        | 5/30 [00:00<00:00, 130.74it/s]Average Metric: 6.00 / 7 (85.7%):  20%|██        | 6/30 [00:00<00:00, 136.62it/s] Average Metric: 6.00 / 8 (75.0%):  23%|██▎       | 7/30 [00:00<00:00, 123.60it/s]Average Metric: 6.00 / 9 (66.7%):  27%|██▋       | 8/30 [00:00<00:00, 119.76it/s]Average Metric: 7.00 / 10 (70.0%):  30%|███       | 9/30 [00:00<00:00, 122.22it/s]Average Metric: 7.00 / 11 (63.6%):  33%|███▎      | 10/30 [00:00<00:00, 135.24it/s]Average Metric: 8.00 / 12 (66.7%):  37%|███▋      | 11/30 [00:00<00:00, 127.66it/s]Average Metric: 8.00 / 13 (61.5%):  40%|████      | 12/30 [00:00<00:00, 138.80it/s]Average Metric: 8.00 / 14 (57.1%):  43%|████▎     | 13/30 [00:00<00:00, 149.91it/s]Average Metric: 9.00 / 15 (60.0%):  47%|████▋     | 14/30 [00:00<00:00, 138.51it/s]Average Metric: 9.00 / 15 (60.0%):  50%|█████     | 15/30 [00:00<00:00, 148.13it/s]Average Metric: 9.00 / 16 (56.2%):  50%|█████     | 15/30 [00:00<00:00, 148.13it/s]Average Metric: 10.00 / 17 (58.8%):  53%|█████▎    | 16/30 [00:00<00:00, 148.13it/s]Average Metric: 11.00 / 18 (61.1%):  57%|█████▋    | 17/30 [00:00<00:00, 148.13it/s]Average Metric: 11.00 / 19 (57.9%):  60%|██████    | 18/30 [00:00<00:00, 148.13it/s]Average Metric: 11.00 / 20 (55.0%):  63%|██████▎   | 19/30 [00:00<00:00, 148.13it/s]Average Metric: 12.00 / 21 (57.1%):  67%|██████▋   | 20/30 [00:00<00:00, 148.13it/s]Average Metric: 13.00 / 22 (59.1%):  70%|███████   | 21/30 [00:00<00:00, 148.13it/s]Average Metric: 13.00 / 23 (56.5%):  73%|███████▎  | 22/30 [00:00<00:00, 148.13it/s]Average Metric: 13.00 / 24 (54.2%):  77%|███████▋  | 23/30 [00:00<00:00, 148.13it/s]Average Metric: 13.00 / 25 (52.0%):  80%|████████  | 24/30 [00:00<00:00, 148.13it/s]Average Metric: 14.00 / 26 (53.8%):  83%|████████▎ | 25/30 [00:00<00:00, 148.13it/s]Average Metric: 14.00 / 27 (51.9%):  87%|████████▋ | 26/30 [00:00<00:00, 148.13it/s]Average Metric: 14.00 / 28 (50.0%):  90%|█████████ | 27/30 [00:00<00:00, 148.13it/s]Average Metric: 14.00 / 29 (48.3%):  93%|█████████▎| 28/30 [00:00<00:00, 148.13it/s]Average Metric: 14.00 / 30 (46.7%):  97%|█████████▋| 29/30 [00:00<00:00, 148.13it/s]Average Metric: 14.00 / 30 (46.7%): 100%|██████████| 30/30 [00:00<00:00, 191.79it/s]
+2026/01/22 23:55:11 INFO dspy.evaluate.evaluate: Average Metric: 14.0 / 30 (46.7%)
+
+Evaluating Best Optimized Program...
+Best Prompt Found:
+Solve the math problem carefully and thoroughly. Your goal is to produce a correct, well‑structured solution that leads unambiguously to the requested final result.
+
+Follow these rules:
+
+1. Restate the problem briefly in your own words.
+
+2. Set up notation and equations cleanly before manipulating them.
+   - Define variables explicitly.
+   - State all constraints (e.g., integrality, ranges, geometric conditions) before using them.
+
+3. Show clear, logically ordered reasoning.
+   - Justify each important algebraic or geometric step.
+   - When you split into cases, state why each case is necessary and what assumptions define it.
+   - If you invoke a known theorem (e.g., Ptolemy, Power of a Point, similarity, Vieta), name it and show exactly how it applies in this context.
+
+4. Handle dead ends correctly.
+   - If you realize a line of reasoning leads to a contradiction or dead end, explicitly say so.
+   - Then restart from the last correct point; do not guess or hand‑wave.
+
+5. Keep the reasoning focused and minimal while still being rigorous.
+   - Avoid unnecessary numerical approximations if an exact approach is available.
+   - Do not approximate exact values unless the problem explicitly asks for a decimal.
+   - Prefer algebraic or structural arguments over trial‑and‑error or random guessing.
+   - You may test candidate values only after deriving strong constraints that sharply limit the possibilities.
+
+6. At the end, clearly isolate the answer:
+   - Provide the final answer as a single number or expression on its own line.
+   - Do not include any extra words, symbols, or explanation on that final line.
+  0%|          | 0/30 [00:00<?, ?it/s]Average Metric: 1.00 / 1 (100.0%):   0%|          | 0/30 [00:14<?, ?it/s]Average Metric: 1.00 / 1 (100.0%):   3%|▎         | 1/30 [00:14<06:49, 14.13s/it]Average Metric: 2.00 / 2 (100.0%):   3%|▎         | 1/30 [00:15<06:49, 14.13s/it]Average Metric: 2.00 / 2 (100.0%):   7%|▋         | 2/30 [00:15<03:05,  6.64s/it]Average Metric: 3.00 / 3 (100.0%):   7%|▋         | 2/30 [00:16<03:05,  6.64s/it]Average Metric: 3.00 / 3 (100.0%):  10%|█         | 3/30 [00:16<01:51,  4.14s/it]Average Metric: 4.00 / 4 (100.0%):  10%|█         | 3/30 [00:16<01:51,  4.14s/it]Average Metric: 5.00 / 5 (100.0%):  13%|█▎        | 4/30 [00:20<01:47,  4.14s/it]Average Metric: 5.00 / 5 (100.0%):  17%|█▋        | 5/30 [00:20<01:14,  2.98s/it]Average Metric: 5.00 / 6 (83.3%):  17%|█▋        | 5/30 [00:21<01:14,  2.98s/it] Average Metric: 5.00 / 6 (83.3%):  20%|██        | 6/30 [00:21<00:52,  2.20s/it]Average Metric: 6.00 / 7 (85.7%):  20%|██        | 6/30 [00:25<00:52,  2.20s/it]Average Metric: 6.00 / 7 (85.7%):  23%|██▎       | 7/30 [00:25<01:07,  2.94s/it]Average Metric: 7.00 / 8 (87.5%):  23%|██▎       | 7/30 [00:32<01:07,  2.94s/it]Average Metric: 7.00 / 8 (87.5%):  27%|██▋       | 8/30 [00:32<01:26,  3.93s/it]Average Metric: 8.00 / 9 (88.9%):  27%|██▋       | 8/30 [00:36<01:26,  3.93s/it]Average Metric: 8.00 / 9 (88.9%):  30%|███       | 9/30 [00:36<01:22,  3.95s/it]Average Metric: 9.00 / 10 (90.0%):  30%|███       | 9/30 [00:37<01:22,  3.95s/it]Average Metric: 9.00 / 10 (90.0%):  33%|███▎      | 10/30 [00:37<01:01,  3.10s/it]Average Metric: 9.00 / 11 (81.8%):  33%|███▎      | 10/30 [00:44<01:01,  3.10s/it]Average Metric: 9.00 / 11 (81.8%):  37%|███▋      | 11/30 [00:44<01:21,  4.27s/it]Average Metric: 10.00 / 12 (83.3%):  37%|███▋      | 11/30 [00:44<01:21,  4.27s/it]Average Metric: 10.00 / 12 (83.3%):  40%|████      | 12/30 [00:44<00:54,  3.06s/it]Average Metric: 10.00 / 13 (76.9%):  40%|████      | 12/30 [00:45<00:54,  3.06s/it]Average Metric: 10.00 / 13 (76.9%):  43%|████▎     | 13/30 [00:45<00:42,  2.50s/it]Average Metric: 10.00 / 14 (71.4%):  43%|████▎     | 13/30 [00:51<00:42,  2.50s/it]Average Metric: 10.00 / 14 (71.4%):  47%|████▋     | 14/30 [00:51<00:57,  3.62s/it]Average Metric: 10.00 / 15 (66.7%):  47%|████▋     | 14/30 [00:53<00:57,  3.62s/it]Average Metric: 10.00 / 15 (66.7%):  50%|█████     | 15/30 [00:53<00:43,  2.91s/it]Average Metric: 11.00 / 16 (68.8%):  50%|█████     | 15/30 [00:56<00:43,  2.91s/it]Average Metric: 11.00 / 16 (68.8%):  53%|█████▎    | 16/30 [00:56<00:43,  3.11s/it]Average Metric: 12.00 / 17 (70.6%):  53%|█████▎    | 16/30 [01:02<00:43,  3.11s/it]Average Metric: 12.00 / 17 (70.6%):  57%|█████▋    | 17/30 [01:02<00:50,  3.90s/it]Average Metric: 13.00 / 18 (72.2%):  57%|█████▋    | 17/30 [01:04<00:50,  3.90s/it]Average Metric: 13.00 / 18 (72.2%):  60%|██████    | 18/30 [01:04<00:38,  3.21s/it]Average Metric: 13.00 / 19 (68.4%):  60%|██████    | 18/30 [01:13<00:38,  3.21s/it]Average Metric: 13.00 / 19 (68.4%):  63%|██████▎   | 19/30 [01:13<00:54,  4.94s/it]Average Metric: 13.00 / 20 (65.0%):  63%|██████▎   | 19/30 [01:13<00:54,  4.94s/it]Average Metric: 14.00 / 21 (66.7%):  67%|██████▋   | 20/30 [01:13<00:49,  4.94s/it]Average Metric: 14.00 / 21 (66.7%):  70%|███████   | 21/30 [01:13<00:24,  2.76s/it]Average Metric: 14.00 / 22 (63.6%):  70%|███████   | 21/30 [01:23<00:24,  2.76s/it]Average Metric: 14.00 / 22 (63.6%):  73%|███████▎  | 22/30 [01:23<00:36,  4.55s/it]Average Metric: 14.00 / 23 (60.9%):  73%|███████▎  | 22/30 [01:25<00:36,  4.55s/it]Average Metric: 14.00 / 23 (60.9%):  77%|███████▋  | 23/30 [01:25<00:26,  3.84s/it]Average Metric: 15.00 / 24 (62.5%):  77%|███████▋  | 23/30 [01:30<00:26,  3.84s/it]Average Metric: 15.00 / 24 (62.5%):  80%|████████  | 24/30 [01:30<00:24,  4.11s/it]Average Metric: 16.00 / 25 (64.0%):  80%|████████  | 24/30 [01:32<00:24,  4.11s/it]Average Metric: 16.00 / 25 (64.0%):  83%|████████▎ | 25/30 [01:32<00:18,  3.60s/it]Average Metric: 17.00 / 26 (65.4%):  83%|████████▎ | 25/30 [01:59<00:18,  3.60s/it]Average Metric: 17.00 / 26 (65.4%):  87%|████████▋ | 26/30 [01:59<00:41, 10.27s/it]Average Metric: 18.00 / 27 (66.7%):  87%|████████▋ | 26/30 [02:03<00:41, 10.27s/it]Average Metric: 18.00 / 27 (66.7%):  90%|█████████ | 27/30 [02:03<00:25,  8.49s/it]Average Metric: 18.00 / 28 (64.3%):  90%|█████████ | 27/30 [02:08<00:25,  8.49s/it]Average Metric: 18.00 / 28 (64.3%):  93%|█████████▎| 28/30 [02:08<00:14,  7.47s/it]Average Metric: 18.00 / 29 (62.1%):  93%|█████████▎| 28/30 [02:32<00:14,  7.47s/it]Average Metric: 18.00 / 29 (62.1%):  97%|█████████▋| 29/30 [02:32<00:12, 12.41s/it]Average Metric: 18.00 / 30 (60.0%):  97%|█████████▋| 29/30 [03:13<00:12, 12.41s/it]Average Metric: 18.00 / 30 (60.0%): 100%|██████████| 30/30 [03:13<00:00, 20.85s/it]Average Metric: 18.00 / 30 (60.0%): 100%|██████████| 30/30 [03:13<00:00,  6.46s/it]
+2026/01/22 23:58:25 INFO dspy.evaluate.evaluate: Average Metric: 18.0 / 30 (60.0%)
+Test score improved from 46.67% to 60.00%!
+
+# (trailing post-eval plotting/cleanup tracebacks omitted from artifact bundle — they do not affect the reported score)

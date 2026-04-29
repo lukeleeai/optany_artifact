@@ -1,10 +1,10 @@
 # Circle Packing (§5.6)
 
-**Paper claim.** Pack n=26 unit circles in the unit square to maximize the sum of radii. optany reaches **2.63598+**, beating AlphaEvolve (2.6358), OpenEvolve, and ShinkaEvolve (2.635978). The optimized algorithm is a bilevel optimizer: an LP over radii with dual-variable gradients for L-BFGS-B center optimization, augmented by CMA-ES exploration and diverse seeding.
+**Paper claim.** Pack n=26 unit circles in the unit square to maximize the sum of radii. `optimize_anything` reaches **2.63598+**, beating AlphaEvolve (2.6358), OpenEvolve, and ShinkaEvolve (2.635978). The optimized algorithm is a bilevel optimizer: an LP over radii with dual-variable gradients for L-BFGS-B center optimization, augmented by CMA-ES exploration and diverse seeding.
 
 ## Code (this folder)
 
-- `main.py`, `utils.py`, `requirements.txt` — runnable optany pipeline (copied from `examples/circle_packing/`).
+- `main.py`, `utils.py`, `requirements.txt` — runnable `optimize_anything` pipeline (copied from `examples/circle_packing/`).
 
 ## Reproduction
 
@@ -29,6 +29,6 @@ To run a fresh optimization instead, delete (or move) `logs/gepa_state.bin` firs
 
 | Rank | Method | Sum of Radii |
 |---|---|---|
-| 1 | optany (this run) | **2.635983362…** |
+| 1 | optimize_anything (this run) | **2.635983362…** |
 | 2 | ShinkaEvolve (500 iters) | 2.635977709… |
 | 3 | AlphaEvolve (published) | 2.6358 |
