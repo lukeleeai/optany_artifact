@@ -4,7 +4,7 @@
 
 ## Code (this folder)
 
-- `svg_cad_tutorial.md` — the full optany blog post containing runnable code for the SVG (pelican on a bicycle) evaluator, VLM scoring, and multi-task `optimize_anything` call. (Copied from `docs/docs/blog/posts/2026-02-18-introducing-optimize-anything/index.md`.)
+- `svg_cad_tutorial.md` — the full `optimize_anything` blog post containing runnable code for the SVG (pelican on a bicycle) evaluator, VLM scoring, and multi-task `optimize_anything` call. (Copied from `docs/docs/blog/posts/2026-02-18-introducing-optimize-anything/index.md`.)
 - `3d_unicorn_optimization.ipynb` — runnable notebook for the 3D unicorn CAD case (copied from `docs/docs/tutorials/`).
 - `images/` — optimized + zero-shot SVG outputs from the paper (`optimized_pelican_gemini_3_flash.svg`, `gemini-3-pro-best-pelican.svg`, `gemini_3_flash_zero_shot.svg`, etc.).
 

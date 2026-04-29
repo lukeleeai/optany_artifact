@@ -1,6 +1,6 @@
 # CUDA Kernel Generation — KernelBench (§5.5)
 
-**Paper claim.** optany generates CUDA kernels for 31 reference PyTorch operations from KernelBench, evaluated on a V100 32GB GPU.
+**Paper claim.** `optimize_anything` generates CUDA kernels for 31 reference PyTorch operations from KernelBench, evaluated on a V100 32GB GPU.
 
 - **87%** of generated kernels match or beat the PyTorch baseline (`Fast_p(1.0) = 0.87`)
 - **48%** achieve ≥10× speedup

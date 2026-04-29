@@ -1,10 +1,10 @@
 # ARC-AGI Agent Architecture (§5.3)
 
-**Paper claim.** Using Gemini 3 Flash as both proposer and underlying agent model, optany evolves a naive 10-line agent seed (one LLM call) into a 300+ line, 4-component architecture with fallbacks. Test accuracy rises **32.5% → 89.5%** (+57pp); validation reaches 93.5%.
+**Paper claim.** Using Gemini 3 Flash as both proposer and underlying agent model, `optimize_anything` evolves a naive 10-line agent seed (one LLM call) into a 300+ line, 4-component architecture with fallbacks. Test accuracy rises **32.5% → 89.5%** (+57pp); validation reaches 93.5%.
 
 ## Code (this folder)
 
-- `main.py`, `utils.py` — runnable optany pipeline (copied from `examples/arc_agi/`).
+- `main.py`, `utils.py` — runnable `optimize_anything` pipeline (copied from `examples/arc_agi/`).
 
 ## Reproduction
 

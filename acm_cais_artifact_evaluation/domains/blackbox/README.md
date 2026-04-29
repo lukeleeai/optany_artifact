@@ -1,6 +1,6 @@
 # Blackbox Mathematical Optimization (Appendix B)
 
-**Paper claim.** Single-task search over solver code on the 56-problem EvalSet benchmark. With a budget of **8,000 evaluations/problem**, optany ties Optuna on 40 problems, wins 7, loses 9. On the **10 selected hardest problems** at a tighter **2,000-evaluation budget**, optany wins **7 / 10**.
+**Paper claim.** Single-task search over solver code on the 56-problem EvalSet benchmark. With a budget of **8,000 evaluations/problem**, `optimize_anything` ties Optuna on 40 problems, wins 7, loses 9. On the **10 selected hardest problems** at a tighter **2,000-evaluation budget**, `optimize_anything` wins **7 / 10**.
 
 The evolved solvers tailor themselves to each landscape — discovering L-BFGS-B for boundary optima and multi-start search for deceptive traps — rather than running a fixed TPE → CMA-ES pipeline.
 
@@ -12,7 +12,7 @@ This folder reproduces the **10-hardest-problems @ 2,000 evals** result. Problem
 
 | File | Purpose |
 |---|---|
-| `main.py` | Entrypoint. Single-problem optany run with externally-tracked evaluation budget |
+| `main.py` | Entrypoint. Single-problem `optimize_anything` run with externally-tracked evaluation budget |
 | `config.py` | CLI argument parser (`--problem-index`, `--evaluation-budget`, `--num-proposals`, `--llm-model`, ...) |
 | `utils.py` | `BudgetTracker` (counts actual objective calls even when generated code crashes), `execute_code`, `extract_best_xs`, seed code, `OBJECTIVE`, `BACKGROUND` |
 | `problems.py` | Problem registry — selects from the 56-problem EvalSet by index |
@@ -44,7 +44,7 @@ Each run writes to `outputs/<run-name>/problem_<i>/<model>/<seed>/<timestamp>/` 
 
 ![Blackbox 10 hardest @ b=2000](logs/b2000_gepa10p_vs_optuna_hardest.png)
 
-optany wins **7 / 10** of the hardest problems against Optuna at the 2,000-evaluation budget.
+`optimize_anything` wins **7 / 10** of the hardest problems against Optuna at the 2,000-evaluation budget.
 
 ## `logs/`
 
@@ -53,7 +53,7 @@ Bundled paper-run output for the 10 hardest problems:
 ```
 logs/
 ├── b2000_gepa10p_vs_optuna_hardest.png      # paper figure
-├── optany_b2000/problem_<i>/gpt-5.1/<seed>/<timestamp>/
+├── optimize_anything_b2000/problem_<i>/gpt-5.1/<seed>/<timestamp>/
 │   ├── gepa_state.bin     # full GEPA optimizer checkpoint
 │   ├── eval_log.jsonl     # per-call objective trace
 │   └── results.json

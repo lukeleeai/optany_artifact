@@ -1,6 +1,6 @@
-# ACM CAIS '26 Artifact Evaluation — `optany`
+# ACM CAIS '26 Artifact Evaluation — `optimize_anything`
 
-Artifact for the paper **"optany: Unified Text Optimization can Outperform Specialized Systems"** (ACM CAIS 2026).
+Artifact for the paper **"optimize_anything: Unified Text Optimization can Outperform Specialized Systems"** (ACM CAIS 2026).
 
 ## Review Modes
 

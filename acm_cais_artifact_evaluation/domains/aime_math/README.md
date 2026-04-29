@@ -4,7 +4,7 @@
 
 ## Code (this folder)
 
-- `main.py`, `utils.py` — runnable optany pipeline (copied from `examples/aime_math/`).
+- `main.py`, `utils.py` — runnable `optimize_anything` pipeline (copied from `examples/aime_math/`).
 
 ## Reproduction
 

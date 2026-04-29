@@ -1,6 +1,6 @@
 # 3D Modeling — Seedless Generation (Appendix C)
 
-**Paper claim.** In seedless mode (no starting artifact), optany bootstraps a working `build123d` + `pyrender` pipeline for generating a 3D unicorn from only a natural-language `objective` and a `background` description of the available libraries.
+**Paper claim.** In seedless mode (no starting artifact), `optimize_anything` bootstraps a working `build123d` + `pyrender` pipeline for generating a 3D unicorn from only a natural-language `objective` and a `background` description of the available libraries.
 
 ## Code (this folder)
 
