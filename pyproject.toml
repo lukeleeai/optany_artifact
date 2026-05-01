@@ -25,6 +25,7 @@ full = [
     "litellm>=1.83.0",
     "tqdm>=4.66.1",
     "cloudpickle>=3.0.0",
+    "dspy>=2.6.27,<3.0",
     # Python < 3.14
     "datasets>=2.14.6; python_version < '3.14'",
     "mlflow>=3.11.1; python_version < '3.14'",
@@ -43,7 +44,9 @@ confidence = [
     "litellm>=1.64.0; python_version < '3.14'",
     "litellm>=1.81.0; python_version >= '3.14'",
 ]
-dspy = []
+dspy = [
+    "dspy>=2.6.27,<3.0",
+]
 test = [
     "gepa[full]",
     "pytest",

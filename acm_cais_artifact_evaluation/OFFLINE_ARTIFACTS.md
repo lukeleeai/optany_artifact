@@ -25,6 +25,17 @@ These domains already include concrete saved trajectories or checkpoints:
 
 ## Recommended Review Flow
 
+From the repository root:
+
+```bash
+uv sync --extra dev
+uv run python acm_cais_artifact_evaluation/verify_offline_artifacts.py
+```
+
+The expected output from this command is saved in `offline_verification_logs/verification_v1.3.log`.
+
+Then:
+
 1. Read the domain `README.md`.
 2. Inspect the saved logs/checkpoints listed above.
 3. Only if needed, try the live rerun path from the domain README.

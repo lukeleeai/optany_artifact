@@ -15,6 +15,32 @@ This artifact supports two review modes:
 
 - `domains/` — one self-contained subdirectory per experimental domain claimed in the paper. Each domain folder is independent and includes its own `README.md`, runnable code, and any artifacts needed to verify the paper's claims.
 - `OFFLINE_ARTIFACTS.md` — zero-API guide to bundled trajectories, checkpoints, and saved evaluations.
+- `verify_offline_artifacts.py` — no-API verifier for the bundled logs, trajectories, and saved outputs.
+- `offline_verification_logs/` — saved output from running the verifier after `uv sync --extra dev`.
+
+## System Requirements
+
+Tested on macOS and Linux.
+
+Required for the general artifact:
+
+- Python `>=3.10,<3.15`
+- `git`
+- `uv`
+
+Install `uv` if it is not already available:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then restart your shell or add the printed `uv` install directory to `PATH`.
+
+Additional requirements for selected live reruns:
+
+- API keys for the model provider named in each domain README.
+- NVIDIA V100 32GB GPU, CUDA 12.1+, and NVCC for KernelBench.
+- Docker for full gskill training/evaluation reruns.
 
 ## Quick repository map
 
@@ -34,15 +60,22 @@ This artifact supports two review modes:
 
 If you do not have API credits, start here:
 
-1. `OFFLINE_ARTIFACTS.md`
-2. `domains/aime_math/logs/`
-3. `domains/arc_agi/logs/`
-4. `domains/blackbox/logs/`
-5. `domains/circle_packing/logs/`
-6. `domains/cloud_scheduling/cloudcast/offline_logs/cloudcast_output.log`
-7. `domains/gskill/offline_runs/`
+```bash
+uv sync --extra dev
+uv run python acm_cais_artifact_evaluation/verify_offline_artifacts.py
+```
+
+Then inspect the files named in `OFFLINE_ARTIFACTS.md` if you want to audit individual claims:
+
+1. `domains/aime_math/logs/`
+2. `domains/arc_agi/logs/`
+3. `domains/blackbox/logs/`
+4. `domains/circle_packing/logs/`
+5. `domains/cloud_scheduling/cloudcast/offline_logs/cloudcast_output.log`
+6. `domains/gskill/offline_runs/`
 
 These paths let reviewers inspect saved trajectories, checkpoints, best artifacts, and post-hoc evaluations without making model calls.
+The expected verifier output is saved in `offline_verification_logs/verification_v1.3.log`.
 
 Best offline-supported domains:
 

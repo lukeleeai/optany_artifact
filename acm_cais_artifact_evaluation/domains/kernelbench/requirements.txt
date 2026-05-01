@@ -4,7 +4,7 @@
 
 torch>=2.1
 numpy
-dspy>=3.0
+dspy>=2.6.27,<3.0
 litellm
 openai
 anthropic
