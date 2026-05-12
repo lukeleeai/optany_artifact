@@ -32,7 +32,7 @@ uv sync --extra dev
 uv run python acm_cais_artifact_evaluation/verify_offline_artifacts.py
 ```
 
-The expected output from this command is saved in `offline_verification_logs/verification_v1.3.log`.
+The expected output from this command is saved in `offline_verification_logs/verification_v1.4.log`.
 
 Then:
 

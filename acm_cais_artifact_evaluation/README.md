@@ -17,6 +17,7 @@ This artifact supports two review modes:
 - `OFFLINE_ARTIFACTS.md` — zero-API guide to bundled trajectories, checkpoints, and saved evaluations.
 - `verify_offline_artifacts.py` — no-API verifier for the bundled logs, trajectories, and saved outputs.
 - `offline_verification_logs/` — saved output from running the verifier after `uv sync --extra dev`.
+- `../LICENSE` — MIT license file for the artifact repository.
 
 ## System Requirements
 
@@ -75,7 +76,7 @@ Then inspect the files named in `OFFLINE_ARTIFACTS.md` if you want to audit indi
 6. `domains/gskill/offline_runs/`
 
 These paths let reviewers inspect saved trajectories, checkpoints, best artifacts, and post-hoc evaluations without making model calls.
-The expected verifier output is saved in `offline_verification_logs/verification_v1.3.log`.
+The expected verifier output is saved in `offline_verification_logs/verification_v1.4.log`.
 
 Best offline-supported domains:
 
@@ -91,6 +92,10 @@ Still primarily live-rerun dependent or only partially supported offline:
 - `domains/cloud_scheduling/can_be_late/` — code, traces, and plots are bundled, but not a full saved trajectory bundle.
 - `domains/kernelbench/` — logs are bundled, but performance reproduction still requires a V100-class GPU.
 - `domains/svg_cad/` and `domains/modeling_3d/` — useful tutorial assets are present, but they are not the strongest no-API validation path.
+
+## License
+
+This artifact repository is released under the MIT license. The root license file is `../LICENSE` from this directory, or `LICENSE` from the repository root.
 
 ## Live Rerun Mode
 
